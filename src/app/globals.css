@@ -6,6 +6,7 @@
   --text-primary: #01081b;
   --text-secondary: #4d525f;
   --brand-primary: #804fb0;
+  --brand-secondry: #932EFA;
 
   /* Spacing scale: 4px base unit */
   --space-0: 0px;
@@ -28,6 +29,7 @@
   /* colors - bg */
 
   --color-primary: var(--brand-primary);
+  --color-secondary: var(--brand-secondry);
 
   /* text colors */
 
