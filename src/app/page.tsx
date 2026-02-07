@@ -4,7 +4,7 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <section className="bg-white w-full h-full flex flex-col">
+    <section className="bg-white w-full h-full flex flex-col overflow-hidden">
       <Navbar />
       <HeroSection />
       <Features />
