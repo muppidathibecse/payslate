@@ -8,6 +8,7 @@ type ButtonProps = {
   icon?: ReactNode;
   iconPosition?: "left" | "right";
   disabled?: boolean;
+  children : ReactNode;
 };
 
 const DEFAULT_BUTTON_CLASSES =
@@ -21,6 +22,7 @@ export default function Button({
   icon,
   iconPosition = "left",
   disabled = false,
+  children
 }: ButtonProps) {
   return (
     <button
@@ -32,6 +34,7 @@ export default function Button({
       {icon && iconPosition === "left" && icon}
       {label}
       {icon && iconPosition === "right" && icon}
+      {children}
     </button>
   );
 }

@@ -18,12 +18,12 @@ const Navbar = () => {
   return (
     <nav
       aria-label="Main navigation"
-      className="mx-auto px-4 py-4 sm:px-6 bg-white max-w-204"
+      className="flex justify-center items-center"
     >
       <div
         className="
-        flex flex-col items-center gap-4
-        rounded-[60px] border border-[#E5E5E5] px-4 py-3
+        absolute top-5 z-50 justify-center flex flex-col items-center gap-4
+        rounded-[60px] bg-white border border-[#E5E5E5] px-4 py-3 max-w-204 
         md:flex-row md:justify-center md:gap-0 md:px-6
       "
       >
@@ -35,8 +35,11 @@ const Navbar = () => {
             height={32}
             priority
           />
-          <span className="text-muted font-medium text-5">
-            Pay<span className="text-primary">slate</span>
+          <span className="text-black font-medium text-5">
+            Pay
+            <span className="text-primary font-medium">
+              s<span className="text-primary font-bold">late</span>
+            </span>
           </span>
         </Link>
 
