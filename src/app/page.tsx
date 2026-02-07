@@ -1,3 +1,4 @@
+import DownloadAppSection from "../components/DownloadAppSection";
 import Features from "../components/Features";
 import HeroSection from "../components/home/hero-section";
 import Navbar from "../components/Navbar";
@@ -8,6 +9,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Features />
+      <DownloadAppSection />
     </section>
   );
 }
