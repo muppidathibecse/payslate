@@ -1,9 +1,17 @@
+import Features from "../components/Features";
+import Navbar from "../components/Navbar";
+
 export default function Home() {
   return (
     <>
-      <h1 className="!text-red-500 bg-white ml-[70px] text-center hover:!text-blue-500">
-        No klnlkiohg;
-      </h1>
+      <section className="bg-white">
+        <Navbar />
+        <div className="bg-red-200 h-[300px]"></div>
+        <div className="bg-red-200 h-[300px]"></div>
+        <div className="bg-red-200 h-[300px]"></div>
+        <div className="bg-red-200 h-[300px]"></div>
+        <Features />
+      </section>
     </>
   );
 }
