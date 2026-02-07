@@ -3,21 +3,80 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --text-primary: #01081B;
-  --text-secondary: #4D525F; /* gray-500 */
+  --text-primary: #01081b;
+  --text-secondary: #4d525f;
+  --brand-primary: #804fb0;
+
+  /* Spacing scale: 4px base unit */
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
+  /* colors - bg */
+
+  --color-primary: var(--brand-primary);
+
+  /* text colors */
+
+  --color-text: var(--text-primary);
+  --color-muted: var(--text-secondary);
+
   --font-sans: var(--font-urbanist);
   --font-mono: var(--font-geist-mono);
+
+  /* Spacing scale */
+  --spacing-0: var(--space-0);
+  --spacing-1: var(--space-1);
+  --spacing-2: var(--space-2);
+  --spacing-3: var(--space-3);
+  --spacing-4: var(--space-4);
+  --spacing-5: var(--space-5);
+  --spacing-6: var(--space-6);
+  --spacing-8: var(--space-8);
+  --spacing-10: var(--space-10);
+  --spacing-12: var(--space-12);
+  --spacing-16: var(--space-16);
+
+  --fontSize-0: var(--space-0);
+  --fontSize-1: var(--space-1);
+  --fontSize-2: var(--space-2);
+  --fontSize-3: var(--space-3);
+  --fontSize-4: var(--space-4);
+  --fontSize-5: var(--space-5);
+  --fontSize-6: var(--space-6);
+  --fontSize-8: var(--space-8);
+
+  /* Font weights */
+  --fontWeight-thin: 100;
+  --fontWeight-extralight: 200;
+  --fontWeight-light: 300;
+  --fontWeight-normal: 400;
+  --fontWeight-medium: 500;
+  --fontWeight-semibold: 600;
+  --fontWeight-bold: 700;
+  --fontWeight-extrabold: 800;
+  --fontWeight-black: 900;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --text-primary: #01081b;
+    --text-secondary: #4d525f;
   }
 }
 

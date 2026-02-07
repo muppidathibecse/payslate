@@ -1,68 +1,73 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
+import { useState } from "react";
+
+const navbarLinks = [
+  { label: "Home", href: "/" },
+  { label: "Features", href: "#features" },
+  { label: "How it works", href: "/how-it-works" },
+  { label: "Testimonials", href: "/testimonials" },
+];
 
 const Navbar = () => {
+  const [activeButton, setActiveButton] = useState<string>("");
+
   return (
-    <header className="bg-white">
-      <nav
-        aria-label="Main navigation"
-        className="mx-auto max-w-7xl px-4 py-4 sm:px-6"
-      >
-        <div
-          className="
+    <nav
+      aria-label="Main navigation"
+      className="mx-auto px-4 py-4 sm:px-6 bg-white max-w-204"
+    >
+      <div
+        className="
         flex flex-col items-center gap-4
         rounded-[60px] border border-[#E5E5E5] px-4 py-3
         md:flex-row md:justify-center md:gap-0 md:px-6
       "
-        >
-          <Link href="/" className="flex items-center gap-2 md:pr-6">
-            <Image
-              src="/assets/logo.svg"
-              alt="Payslate logo"
-              width={32}
-              height={32}
-              priority
-            />
-            <span className="text-secondary font-medium text-[20px] text-gray-900">
-              Pay<span className="text-[#804FB0]">slate</span>
-            </span>
-          </Link>
+      >
+        <Link href="/" className="flex items-center gap-2 md:pr-6">
+          <Image
+            src="/assets/logo.svg"
+            alt="Payslate logo"
+            width={32}
+            height={32}
+            priority
+          />
+          <span className="text-muted font-medium text-5">
+            Pay<span className="text-primary">slate</span>
+          </span>
+        </Link>
 
-          <ul
-            className="
-          flex flex-wrap items-center justify-center gap-4 text-sm font-medium text-gray-700
+        <ul
+          className="
+          flex flex-wrap items-center justify-center gap-4 text-4 font-medium
           md:ml-6 md:flex-nowrap md:gap-8
         "
-          >
-            <li>
-              <Link href="/" className="font-medium text-[16px]">
-                Home
+        >
+          {navbarLinks.map((link) => (
+            <li key={link.href}>
+              <Link
+                href={link.href}
+                aria-label={link.label}
+                onClick={() => setActiveButton(link.label)}
+                className={`hover:text-text transition-colors duration-200  ${
+                  activeButton === link.label
+                    ? "text-text font-semibold"
+                    : "text-muted"
+                }`}
+              >
+                {link.label}
               </Link>
             </li>
-            <li>
-              <Link href="#features" className="font-medium text-[16px]">
-                Features
-              </Link>
-            </li>
-
-            <li>
-              <Link href="/how-it-works" className="font-medium text-[16px]">
-                How it works
-              </Link>
-            </li>
-            <li>
-              <Link href="/testimonials" className="font-medium text-[16px]">
-                Testimonials
-              </Link>
-            </li>
-            <li>
-              <Button label="Download APP" />
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+          ))}
+          <li>
+            <Button label="Download APP" />
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 
