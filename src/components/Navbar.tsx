@@ -18,12 +18,12 @@ const Navbar = () => {
   return (
     <nav
       aria-label="Main navigation"
-      className="mx-auto flex items-center justify-center px-4 py-4 sm:px-6 sticky top-0 z-50 bg-white"
+      className="flex justify-center items-center"
     >
       <div
         className="
-        flex flex-col items-center gap-4
-        rounded-[60px] border border-[#E5E5E5] px-4 py-3 max-w-204 
+        absolute top-5 z-50 justify-center flex flex-col items-center gap-4
+        rounded-[60px] bg-white border border-[#E5E5E5] px-4 py-3 max-w-204 
         md:flex-row md:justify-center md:gap-0 md:px-6
       "
       >
