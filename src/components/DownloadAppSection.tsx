@@ -129,4 +129,4 @@ const DownloadAppSection = () => {
   );
 };
 
-export { DownloadAppSection };
+export default DownloadAppSection;
