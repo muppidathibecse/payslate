@@ -1,18 +1,13 @@
 import Features from "../components/Features";
+import HeroSection from "../components/home/hero-section";
 import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <>
-      <section className="bg-white">
-        <Navbar />
-        <div className="bg-red-200 h-[300px]"></div>
-        <div className="bg-red-200 h-[300px]"></div>
-        <div className="bg-red-200 h-[300px]"></div>
-        <div className="bg-red-200 h-[300px]"></div>
-        <div className="bg-red-200 h-[300px]"></div>
-        <Features />
-      </section>
-    </>
+    <section className="bg-white w-full h-full flex flex-col">
+      <Navbar />
+      <HeroSection />
+      <Features />
+    </section>
   );
 }
