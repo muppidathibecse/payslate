@@ -7,6 +7,7 @@
   --text-secondary: #4d525f;
   --brand-primary: #804fb0;
   --brand-secondry: #932efa;
+  --feature-text: #6B7280;
   --footer-primary: #1a1a1a;
   --footer-secondary: #3a3a3a;
 
@@ -35,6 +36,7 @@
   --color-secondary: var(--brand-secondry);
   --color-footer-primary: var(--footer-primary);
   --color-footer-secondary: var(--footer-secondary);
+  --color-feature-text: var(--feature-text);
 
   /* text colors */
 

@@ -9,8 +9,6 @@ enum DownloadPlatform {
   IOS = "ios",
 }
 
-
-
 const DownloadSectionCard = ({
   className,
   label,
@@ -70,38 +68,40 @@ const DownloadSectionCard = ({
 
 const DownloadAppSection = () => {
   return (
-    <div
-      className="flex flex-col items-center max-w-300 w-full mx-auto p-6 md:p-12"
-      id="download-app-section"
-    >
-      <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">
-        {DownloadAppSectionData.label}
-      </span>
-      <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-6 mt-4">
-        <p className="font-bold text-text text-4xl w-full md:w-1/2">
-          {DownloadAppSectionData.subheading}
-        </p>
-        <p className="text-base text-muted w-full md:w-1/2 mt-2 md:mt-0">
-          {DownloadAppSectionData.paragraph}
-        </p>
-      </div>
+    <section className="flex justify-center w-full p-6 md:p-12 2xl:px-0">
+      <div
+        className="flex flex-col items-center 2xl:w-360"
+        id="download-app-section"
+      >
+        <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">
+          {DownloadAppSectionData.label}
+        </span>
+        <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-6 mt-4">
+          <p className="font-bold text-text text-4xl w-full md:w-1/2">
+            {DownloadAppSectionData.subheading}
+          </p>
+          <p className="text-base text-muted w-full md:w-1/2 mt-2 md:mt-0">
+            {DownloadAppSectionData.paragraph}
+          </p>
+        </div>
 
-      <div className="flex flex-col md:flex-row gap-20 mt-6 md:mt-20 w-full">
-        {appDownloadOptions.map((option, index) => (
-          <DownloadSectionCard
-            key={option.platform}
-            label={option.title}
-            icon={option.platform as DownloadPlatform}
-            subheading={option.description}
-            ctaLabel={option.ctaLabel}
-            ctaLink={option.storeUrl}
-            className={`border border-[#D8D8D8] ${
-              index % 2 === 0 ? "bg-[#F7F8FD]" : "bg-[#FEFCF9]"
-            }`}
-          />
-        ))}
+        <div className="flex flex-col md:flex-row gap-20 mt-6 md:mt-20 w-full">
+          {appDownloadOptions.map((option, index) => (
+            <DownloadSectionCard
+              key={option.platform}
+              label={option.title}
+              icon={option.platform as DownloadPlatform}
+              subheading={option.description}
+              ctaLabel={option.ctaLabel}
+              ctaLink={option.storeUrl}
+              className={`border border-[#D8D8D8] ${
+                index % 2 === 0 ? "bg-[#F7F8FD]" : "bg-[#FEFCF9]"
+              }`}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -9,7 +9,7 @@ const navbarLinks = [
   { label: "Home", href: "/" },
   { label: "Features", href: "#features" },
   { label: "How it works", href: "/how-it-works" },
-  { label: "Testimonials", href: "/testimonials" },
+  { label: "Testimonials", href: "#testimonial" },
 ];
 
 const Navbar = () => {
@@ -28,13 +28,7 @@ const Navbar = () => {
       "
       >
         <Link href="/" className="flex items-center gap-2 md:pr-6">
-          <Image
-            src="/assets/logo.svg"
-            alt="Payslate logo"
-            width={32}
-            height={32}
-            priority
-          />
+          <Image src="/Brand.gif" alt="Brand" width={30} height={30} priority />
           <span className="text-black font-medium text-5">
             Pay
             <span className="text-primary font-medium">

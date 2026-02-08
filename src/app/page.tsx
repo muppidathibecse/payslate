@@ -3,6 +3,7 @@ import Features from "../components/features/Feature";
 import Footer from "../components/Footer";
 import HeroSection from "../components/home/hero-section";
 import Navbar from "../components/Navbar";
+import Testimonial from "../components/Testimonial";
 
 export default function Home() {
   return (
@@ -10,8 +11,9 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <Features />
+      <Testimonial />
       <DownloadAppSection />
-      <Footer/>
+      <Footer />
     </section>
   );
 }

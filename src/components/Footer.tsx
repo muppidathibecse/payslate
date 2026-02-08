@@ -1,45 +1,24 @@
+import Image from "next/image";
 import Facebook from "../icons/Facebook";
 import Insta from "../icons/Insta";
 import LinkedIn from "../icons/LinkedIn";
-import PaySlate from "../icons/PaySlate";
 import Button from "./Button";
-import { AppleStoreIcon } from "../icons/AppStore";
-import { PlayStoreIcon } from "../icons/PlayStore";
-
-const navLinks1 = [
-  { label: "Home", href: "#home" },
-  { label: "Features", href: "#features" },
-  { label: "About", href: "#about" },
-];
-const navLinks2 = [
-  { label: "How it Works", href: "#how-it-works" },
-  { label: "Key Features", href: "#key-features" },
-  { label: "Testimonial", href: "#testimonial" },
-];
-const buttons = [
-  {
-    label: "App Store",
-    className: "uppercase font-medium text-sm",
-    icon: <AppleStoreIcon />,
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=com.dotmite.payslate",
-  },
-  {
-    label: "Play Store",
-    className: "uppercase font-medium text-sm",
-    icon: <PlayStoreIcon />,
-    storeUrl: "https://apps.apple.com/in/app/payslate/id6737227735",
-  },
-];
+import { buttons, navLinks1, navLinks2 } from "./home/data";
 
 export default function Footer() {
   return (
-    <footer className="bg-footer-primary text-white">
-      <div className=" w-full mx-auto px-8 lg:px-100 py-16 ">
+    <footer className="bg-footer-primary text-white p-6 md:p-12 flex flex-col justify-center items-center">
+      <div className=" w-full 2xl:w-360">
         <div className="w-full flex justify-between mb-10">
           <div className="text-4xl font-medium flex flex-row">
             <span className="px-2">
-              <PaySlate />
+              <Image
+                src="/Brand.gif"
+                alt="Brand"
+                width={30}
+                height={30}
+                priority
+              />
             </span>
             <span> Pay</span>
             <span className="text-primary">slate</span>
