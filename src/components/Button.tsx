@@ -8,7 +8,7 @@ type ButtonProps = {
   icon?: ReactNode;
   iconPosition?: "left" | "right";
   disabled?: boolean;
-  children : ReactNode;
+  children ?: ReactNode;
 };
 
 const DEFAULT_BUTTON_CLASSES =

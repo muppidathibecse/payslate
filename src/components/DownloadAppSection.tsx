@@ -2,38 +2,14 @@ import Image from "next/image";
 import Button from "./Button";
 import { AppleStoreIcon } from "../icons/AppleStoreIcon";
 import { PlayStoreIcon } from "../icons/PlayStoreIcon";
+import { appDownloadOptions, DownloadAppSectionData } from "./home/data";
 
 enum DownloadPlatform {
   ANDROID = "android",
   IOS = "ios",
 }
 
-const DownloadAppSectionData = {
-  label: "Download App",
-  subheading: "All-in-one platform to manage your company finances",
-  paragraph:
-    "Payslate simplifies financial operations by combining cash flow management, material tracking, and business accounts in one secure, real-time system.",
-};
 
-const appDownloadOptions = [
-  {
-    platform: "android",
-    title: "Download for Android",
-    description:
-      "The best finance app ever built on Google. Get it on Google Play.",
-    ctaLabel: "Play Store",
-    storeUrl:
-      "https://play.google.com/store/apps/details?id=com.dotmite.payslate",
-  },
-  {
-    platform: "ios",
-    title: "Download for iOS",
-    description:
-      "The best finance app ever built on Apple. Get it on the App Store.",
-    ctaLabel: "App Store",
-    storeUrl: "https://apps.apple.com/in/app/payslate/id6737227735",
-  },
-];
 
 const DownloadSectionCard = ({
   className,
@@ -52,7 +28,7 @@ const DownloadSectionCard = ({
 }) => {
   return (
     <div
-      className={`flex flex-col justify-between items-start relative text-text px-6 pt-6 pb-0 rounded-[40px] flex-1 h-120 xl:h-150 min-w-[250px] ${className}`}
+      className={`flex flex-col justify-between items-start relative text-text px-6 pt-6 pb-0 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 ${className}`}
     >
       <div role="region" aria-labelledby="download-app-section-title">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">{label}</h2>

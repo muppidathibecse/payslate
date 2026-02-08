@@ -1,5 +1,5 @@
 import DownloadAppSection from "../components/DownloadAppSection";
-import Features from "../components/Features";
+import Features from "../components/features/Feature";
 import Footer from "../components/Footer";
 import HeroSection from "../components/home/hero-section";
 import Navbar from "../components/Navbar";
