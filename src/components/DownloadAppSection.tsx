@@ -3,6 +3,7 @@ import Button from "./Button";
 import { AppleStoreIcon } from "../icons/AppleStoreIcon";
 import { PlayStoreIcon } from "../icons/PlayStoreIcon";
 import { appDownloadOptions, DownloadAppSectionData } from "./home/data";
+import ExploreApp from "./ExploreApp";
 
 enum DownloadPlatform {
   ANDROID = "android",
@@ -25,10 +26,10 @@ const DownloadSectionCard = ({
   ctaLink?: string;
 }) => {
   return (
-    <div
+    <section
       className={`flex flex-col justify-between items-start relative text-text px-6 pt-6 pb-0 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 ${className}`}
     >
-      <div role="region" aria-labelledby="download-app-section-title">
+      <div aria-labelledby="download-app-section-title">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">{label}</h2>
         <p className="text-base md:text-lg mb-4">{subheading}</p>
         {ctaLabel && (
@@ -62,13 +63,16 @@ const DownloadSectionCard = ({
           height={300}
         />
       </div>
-    </div>
+    </section>
   );
 };
 
 const DownloadAppSection = () => {
   return (
-    <section className="flex justify-center w-full p-6 md:p-12 2xl:px-0">
+    <section
+      id="download"
+      className="flex flex-col items-center gap-56.75 justify-center w-full p-6 md:p-12 2xl:px-0"
+    >
       <div
         className="flex flex-col items-center 2xl:w-360"
         id="download-app-section"
@@ -101,6 +105,7 @@ const DownloadAppSection = () => {
           ))}
         </div>
       </div>
+      <ExploreApp />
     </section>
   );
 };

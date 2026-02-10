@@ -48,8 +48,8 @@ export default function Testimonial() {
   const VISIBLE_CARDS = 2;
   const CARD_WIDTH = 419;
   const GAP = 24;
-  const STEP = VISIBLE_CARDS;
-  const maxIndex = TESTIMONIALS.length - VISIBLE_CARDS;
+  const STEP = 1;
+  const maxIndex = TESTIMONIALS.length - 1;
 
   const prev = () => {
     setIndex((i) => Math.max(i - STEP, 0));
@@ -71,7 +71,7 @@ export default function Testimonial() {
               {TestimonialData.label}
             </span>
 
-            <p className="mt-1 font-bold text-text text-4xl w-full">
+            <p className="mt-4 font-bold text-text text-4xl w-full">
               {TestimonialData.title}
             </p>
 
@@ -83,18 +83,24 @@ export default function Testimonial() {
               <button
                 onClick={prev}
                 disabled={index === 0}
-                className={`flex h-14 w-14 items-center justify-center rounded-full border transition border-[#CFD0D1] ${index === 0 ? "cursor-not-allowed opacity-40" : "cursor-pointer"}`}
+                className={`flex h-14 w-14 items-center justify-center rounded-full border transition border-feature-muted ${index === 0 ? "cursor-not-allowed opacity-40" : "cursor-pointer"}`}
               >
                 <PreviousCardIcon />
               </button>
 
               <button
                 onClick={next}
-                disabled={index >= maxIndex}
-                className={`flex h-14 w-14 items-center justify-center rounded-full transition cursor-pointer
-                ${index >= maxIndex ? "opacity-0" : "bg-primary"}`}
+                disabled={index == maxIndex}
+                className={`flex h-14 w-14 items-center justify-center rounded-full transition 
+                ${index == maxIndex ? "border border-feature-muted cursor-not-allowed opacity-40" : "bg-primary cursor-pointer"}`}
               >
-                <NextCardIcon />
+                {index != maxIndex ? (
+                  <NextCardIcon />
+                ) : (
+                  <div className="rotate-180">
+                    <PreviousCardIcon />
+                  </div>
+                )}
               </button>
             </div>
           </header>

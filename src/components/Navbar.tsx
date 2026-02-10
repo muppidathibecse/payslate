@@ -8,7 +8,7 @@ import { useState } from "react";
 const navbarLinks = [
   { label: "Home", href: "/" },
   { label: "Features", href: "#features" },
-  { label: "How it works", href: "/how-it-works" },
+  { label: "How it works", href: "/how" },
   { label: "Testimonials", href: "#testimonial" },
 ];
 
@@ -60,7 +60,12 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <Button label="Download APP" />
+            <a
+              href={"#download"}
+              onClick={() => setActiveButton("Download App")}
+            >
+              <Button label="Download APP" />
+            </a>
           </li>
         </ul>
       </div>

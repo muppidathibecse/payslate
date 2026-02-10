@@ -14,7 +14,7 @@ export default function Footer() {
             <span className="px-2">
               <Image
                 src="/Brand.gif"
-                alt="Brand"
+                alt="Payslate Logo"
                 width={30}
                 height={30}
                 priority
