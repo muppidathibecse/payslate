@@ -6,7 +6,11 @@
   --text-primary: #01081b;
   --text-secondary: #4d525f;
   --brand-primary: #804fb0;
-  --brand-secondry: #932EFA;
+  --brand-secondry: #932efa;
+  --feature-muted: #CFD0D1;
+  --feature-text: #6B7280;
+  --footer-primary: #1a1a1a;
+  --footer-secondary: #3a3a3a;
 
   /* Spacing scale: 4px base unit */
   --space-0: 0px;
@@ -14,6 +18,7 @@
   --space-2: 8px;
   --space-3: 12px;
   --space-4: 16px;
+  --space-4-5: 18px;
   --space-5: 20px;
   --space-6: 24px;
   --space-8: 32px;
@@ -30,6 +35,10 @@
 
   --color-primary: var(--brand-primary);
   --color-secondary: var(--brand-secondry);
+  --color-footer-primary: var(--footer-primary);
+  --color-footer-secondary: var(--footer-secondary);
+  --color-feature-text: var(--feature-text);
+  --color-feature-muted: var(--feature-muted);
 
   /* text colors */
 
@@ -45,6 +54,7 @@
   --spacing-2: var(--space-2);
   --spacing-3: var(--space-3);
   --spacing-4: var(--space-4);
+  --spacing-4-5: var(--space-4-5);
   --spacing-5: var(--space-5);
   --spacing-6: var(--space-6);
   --spacing-8: var(--space-8);
