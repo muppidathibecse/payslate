@@ -144,6 +144,44 @@ export const Logos = [
   },
 ];
 
+export const LogosData = [
+  {
+    customerName: 'DECATHLON',
+    logo: '/assets/icons/companyLogos/decathlonIcon.svg',
+    coloredLogo: '/assets/icons/companyLogos/decathlonColoredIcon.svg',
+  },
+  {
+    customerName: 'XEROX',
+    logo: '/assets/icons/companyLogos/xeroxIcon.svg',
+    coloredLogo: '/assets/icons/companyLogos/xeroxColoredIcon.svg',
+  },
+  {
+    customerName: 'HSBC',
+    logo: '/assets/icons/companyLogos/hsbcIcon.svg',
+    coloredLogo: '/assets/icons/companyLogos/hsbcColoredIcon.svg',
+  },
+  {
+    customerName: 'NIKE',
+    logo: '/assets/icons/companyLogos/nikeIcon.svg',
+    coloredLogo: '/assets/icons/companyLogos/nikeColoredIcon.svg',
+  },
+  {
+    customerName: 'TCS',
+    logo: '/assets/icons/companyLogos/tcsIcon.svg',
+    coloredLogo: '/assets/icons/companyLogos/tcsColoredIcon.svg',
+  },
+  {
+    customerName: 'CAPGEMINI',
+    logo: '/assets/icons/companyLogos/capgeminiIcon.svg',
+    coloredLogo: '/assets/icons/companyLogos/capgeminiColoredIcon.svg',
+  },
+  {
+    customerName: 'LOTTOSOCIAL',
+    logo: '/assets/icons/companyLogos/lottoSocialIcon.svg',
+    coloredLogo: '/assets/icons/companyLogos/lottoSocialColoredIcon.svg',
+  },
+]
+
 export const TESTIMONIALS = [
   {
     id: 1,

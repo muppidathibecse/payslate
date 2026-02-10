@@ -97,3 +97,20 @@ body {
   color: var(--foreground);
   font-family: var(--font-urbanist), Arial, Helvetica, sans-serif;
 }
+
+
+.scroll-container {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: scroll-left 5s linear infinite;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}

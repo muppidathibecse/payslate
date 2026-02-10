@@ -4,6 +4,7 @@ import { NextCardIcon } from "../icons/NextCardIcon";
 import { PreviousCardIcon } from "../icons/PreviousCardIcon";
 import { RatingsStarIcon } from "../icons/RatingsStarIcon";
 import { Logos, TestimonialData, TESTIMONIALS } from "./home/data";
+import LogoScrolling from "./LogoScrolling";
 
 function TestimonialCard({
   rating,
@@ -126,15 +127,7 @@ export default function Testimonial() {
           <p className="font-medium text-2xl text-center text-feature-text">
             Trusted by teams turning ideas into impact with iwurk
           </p>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-8 place-items-center">
-            {Logos.map((item, i) => (
-              <div key={i} className="flex justify-center items-center w-full">
-                <div className="max-w-30 w-full flex justify-center">
-                  {item.icon}
-                </div>
-              </div>
-            ))}
-          </div>
+          <LogoScrolling />
         </div>
       </div>
     </section>
