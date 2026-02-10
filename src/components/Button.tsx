@@ -12,7 +12,7 @@ type ButtonProps = {
 };
 
 const DEFAULT_BUTTON_CLASSES =
-  "rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 cursor-pointer inline-flex items-center gap-2";
+  "rounded-full bg-primary px-6 py-3.5 text-sm font-medium text-white transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 cursor-pointer inline-flex items-center gap-2";
 
 export default function Button({
   label,

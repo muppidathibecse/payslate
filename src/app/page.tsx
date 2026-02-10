@@ -1,5 +1,6 @@
 import DownloadAppSection from "../components/DownloadAppSection";
 import Features from "../components/features/Feature";
+import HowItWorks from "../components/HowItWorks";
 import Footer from "../components/Footer";
 import HeroSection from "../components/home/hero-section";
 import Navbar from "../components/Navbar";
@@ -10,6 +11,7 @@ export default function Home() {
     <section className="bg-white w-full h-full flex flex-col overflow-hidden">
       <Navbar />
       <HeroSection />
+      <HowItWorks />
       <Features />
       <Testimonial />
       <DownloadAppSection />
