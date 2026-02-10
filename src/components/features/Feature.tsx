@@ -19,7 +19,7 @@ const Features = () => (
         </p>
       </div>
 
-      <ul className="w-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 rounded-2xl mt-6 md:mt-10 bg-[url('/assets/imageBg.png')] bg-cover bg-center bg-no-repeat">
+      <ul className="py-5 w-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 rounded-2xl mt-6 md:mt-10 bg-[url('/assets/imageBg.png')] bg-cover bg-center bg-no-repeat">
         {featuresData.map((feature, index) => (
           <li key={index} className={KEY_FEATUURES_CARD_STYLE}>
             <Card

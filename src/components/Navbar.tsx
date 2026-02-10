@@ -13,7 +13,7 @@ const navbarLinks = [
 ];
 
 const Navbar = () => {
-  const [activeButton, setActiveButton] = useState<string>("");
+  const [activeButton, setActiveButton] = useState<string>("Home");
 
   return (
     <nav
@@ -60,12 +60,12 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            <a
+            <Link
               href={"#download"}
               onClick={() => setActiveButton("Download App")}
             >
               <Button label="Download APP" />
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

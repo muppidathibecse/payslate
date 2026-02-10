@@ -27,7 +27,7 @@ const DownloadSectionCard = ({
 }) => {
   return (
     <section
-      className={`flex flex-col justify-between items-start relative text-text px-6 pt-6 pb-0 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 ${className}`}
+      className={`flex flex-col justify-between items-start relative text-text px-6 pt-6 pb-0 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 overflow-hidden ${className}`}
     >
       <div aria-labelledby="download-app-section-title">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">{label}</h2>
@@ -54,11 +54,11 @@ const DownloadSectionCard = ({
           </a>
         )}
       </div>
-      <div className="relative bottom-0 md:h-50 flex self-center mt-10 md:mt-0">
+      <div className="relative bottom-[-137] flex self-center ">
         <Image
-          src="/Samsung Galaxy S21 Ultra.png"
+          src={icon === "ios" ? "/Samsung Ios.png" : "/Samsung Android.png"}
           alt="App Preview"
-          className="mt-4 w-full h-auto transition-transform duration-300 ease-in-out hover:-translate-y-12"
+          className="mt-4 w-full h-auto transition-transform duration-300 ease-in-out hover:-translate-y-32"
           width={300}
           height={300}
         />

@@ -153,6 +153,14 @@ export const TESTIMONIALS = [
     role: "Digital Marketing Specialist",
     avatar: "https://i.pravatar.cc/100?img=12",
   },
+  {
+    id: 2,
+    rating: 1,
+    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
+    name: "Ethan Williams",
+    role: "Digital Marketing Specialist",
+    avatar: "https://i.pravatar.cc/100?img=12",
+  },
 ];
 
 export const DownloadAppSectionData = {
@@ -164,6 +172,14 @@ export const DownloadAppSectionData = {
 
 export const appDownloadOptions = [
   {
+    platform: "ios",
+    title: "Download for iOS",
+    description:
+      "The best finance app ever built on Apple. Get it on the App Store.",
+    ctaLabel: "App Store",
+    storeUrl: "https://apps.apple.com/in/app/payslate/id6737227735",
+  },
+  {
     platform: "android",
     title: "Download for Android",
     description:
@@ -171,14 +187,6 @@ export const appDownloadOptions = [
     ctaLabel: "Play Store",
     storeUrl:
       "https://play.google.com/store/apps/details?id=com.dotmite.payslate",
-  },
-  {
-    platform: "ios",
-    title: "Download for iOS",
-    description:
-      "The best finance app ever built on Apple. Get it on the App Store.",
-    ctaLabel: "App Store",
-    storeUrl: "https://apps.apple.com/in/app/payslate/id6737227735",
   },
 ];
 
