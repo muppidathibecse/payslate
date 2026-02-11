@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
-import { NextCardIcon } from "../icons/NextCardIcon";
-import { PreviousCardIcon } from "../icons/PreviousCardIcon";
+import { CardMovingIconColored } from "../icons/CardMovingIconColored";
+import { CardMovingIcon } from "../icons/PreviousCardIcon";
 import { RatingsStarIcon } from "../icons/RatingsStarIcon";
 import { Logos, TestimonialData, TESTIMONIALS } from "./home/data";
 import LogoScrolling from "./LogoScrolling";
@@ -84,9 +84,15 @@ export default function Testimonial() {
               <button
                 onClick={prev}
                 disabled={index === 0}
-                className={`flex h-14 w-14 items-center justify-center rounded-full border transition border-feature-muted ${index === 0 ? "cursor-not-allowed opacity-40" : "cursor-pointer"}`}
+                className={`flex h-14 w-14 items-center justify-center rounded-full border transition border-feature-muted ${index === 0 ? "cursor-not-allowed opacity-40" : "bg-primary cursor-pointer"}`}
               >
-                <PreviousCardIcon />
+                {index == 0 ? (
+                  <CardMovingIcon />
+                ) : (
+                  <div className="rotate-180">
+                    <CardMovingIconColored />
+                  </div>
+                )}
               </button>
 
               <button
@@ -96,10 +102,10 @@ export default function Testimonial() {
                 ${index == maxIndex ? "border border-feature-muted cursor-not-allowed opacity-40" : "bg-primary cursor-pointer"}`}
               >
                 {index != maxIndex ? (
-                  <NextCardIcon />
+                  <CardMovingIconColored />
                 ) : (
                   <div className="rotate-180">
-                    <PreviousCardIcon />
+                    <CardMovingIcon />
                   </div>
                 )}
               </button>

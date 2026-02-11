@@ -7,7 +7,7 @@ export default function LogoScrolling() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <>
-      <section className='px-4 flex-row gap-18 items-center justify-center hidden md:flex overflow-hidden pt-[41px]'>
+      <section className='px-4 flex-row gap-18 items-center justify-center hidden md:flex overflow-hidden h-20'>
         <div className='scroll-container '>
           {LogosData.concat(LogosData).map((customer, index) => (
             <Image 

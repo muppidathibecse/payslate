@@ -1,4 +1,4 @@
-const PreviousCardIcon = () => {
+const CardMovingIcon = () => {
   return (
     <svg
       width="8"
@@ -15,4 +15,4 @@ const PreviousCardIcon = () => {
   );
 };
 
-export { PreviousCardIcon };
+export { CardMovingIcon };

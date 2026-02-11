@@ -33,9 +33,9 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="bg-[#F6F6F6] py-10 2xl:px-20 flex items-center justify-center"
+      className="bg-[#F6F6F6] flex items-center justify-center p-6 md:p-12 2xl:px-0"
     >
-      <div className="mx-auto w-full 2xl:w-360 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto w-full 2xl:w-360">
         <header className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
           <div className="max-w-2xl">
             <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">

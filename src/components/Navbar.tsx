@@ -4,29 +4,20 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "./Button";
 import { useState } from "react";
+import { navbarLinks } from "./home/data";
 
-const navbarLinks = [
-  { label: "Home", href: "/" },
-  { label: "Features", href: "#features" },
-  { label: "How it works", href: "#how-it-works" },
-  { label: "Testimonials", href: "#testimonial" },
-];
+
 
 const Navbar = () => {
   const [activeButton, setActiveButton] = useState<string>("Home");
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
     <nav
       aria-label="Main navigation"
       className="flex justify-center items-center"
     >
-      <div
-        className="
-        absolute top-5 z-50 justify-center flex flex-col items-center gap-4
-        rounded-[60px] bg-white border border-[#E5E5E5] px-4 py-3 max-w-204 
-        md:flex-row md:justify-center md:gap-0 md:px-6
-      "
-      >
+      <div className="absolute top-5 z-50 flex flex-row items-center gap-4 rounded-[60px] bg-white md:border md:border-[#E5E5E5] md:px-4 py-3 max-w-204 w-[90%] md:flex-row md:justify-center md:gap-0">
         <Link href="/" className="flex items-center gap-2 md:pr-6">
           <Image src="/Brand.gif" alt="Brand" width={30} height={30} priority />
           <span className="text-black font-medium text-5">
@@ -37,19 +28,14 @@ const Navbar = () => {
           </span>
         </Link>
 
-        <ul
-          className="
-          flex flex-wrap items-center justify-center gap-4 text-4 font-medium
-          md:ml-6 md:flex-nowrap md:gap-8
-        "
-        >
+        <ul className="hidden md:flex items-center justify-center gap-8 text-4 font-medium md:ml-6">
           {navbarLinks.map((link) => (
             <li key={link.href}>
               <Link
                 href={link.href}
                 aria-label={link.label}
                 onClick={() => setActiveButton(link.label)}
-                className={`hover:text-text transition-colors duration-200  ${
+                className={`hover:text-text transition-colors duration-200 ${
                   activeButton === link.label
                     ? "text-text font-semibold"
                     : "text-muted"
@@ -59,16 +45,59 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
+
           <li>
             <Link
-              href={"#download"}
+              href="#download"
               onClick={() => setActiveButton("Download App")}
             >
               <Button label="Download APP" />
             </Link>
           </li>
         </ul>
+
+        <button
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden ml-auto p-2"
+          aria-label="Toggle menu"
+        >
+          <Image
+            src="assets/icons/mobileViewMenuIcon.svg"
+            alt="Menu Icon"
+            width={24}
+            height={24}
+          />
+        </button>
       </div>
+
+      {isMobileMenuOpen && (
+        <div className="md:hidden bg-white absolute top-22 z-40 w-full px-6 py-6 space-y-5">
+          {navbarLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => {
+                setActiveButton(link.label);
+                setIsMobileMenuOpen(false);
+              }}
+              className={`block text-base font-medium ${
+                activeButton === link.label
+                  ? "text-text font-semibold"
+                  : "text-muted"
+              }`}
+            >
+              {link.label}
+            </Link>
+          ))}
+
+          <Link href="#download" onClick={() => setIsMobileMenuOpen(false)}>
+            <Button
+              label="Download App"
+              className="w-full flex justify-center items-center"
+            />
+          </Link>
+        </div>
+      )}
     </nav>
   );
 };

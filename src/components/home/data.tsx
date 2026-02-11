@@ -8,7 +8,13 @@ import NikeLogo from "@/src/icons/NikeLogo";
 import { PlayStoreIcon } from "@/src/icons/PlayStore";
 import TcsLogo from "@/src/icons/TcsLogo";
 import XeroxLogo from "@/src/icons/XeroxLogo";
-import { label } from "framer-motion/client";
+
+export const navbarLinks = [
+  { label: "Home", href: "/" },
+  { label: "Features", href: "#features" },
+  { label: "How it works", href: "#how-it-works" },
+  { label: "Testimonials", href: "#testimonial" },
+];
 
 export const avatarDetails = [
   {
@@ -194,6 +200,30 @@ export const TESTIMONIALS = [
   {
     id: 2,
     rating: 1,
+    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
+    name: "Ethan Williams",
+    role: "Digital Marketing Specialist",
+    avatar: "https://i.pravatar.cc/100?img=12",
+  },
+  {
+    id: 3,
+    rating: 1,
+    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
+    name: "Ethan Williams",
+    role: "Digital Marketing Specialist",
+    avatar: "https://i.pravatar.cc/100?img=12",
+  },
+  {
+    id: 4,
+    rating: 2,
+    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
+    name: "Ethan Williams",
+    role: "Digital Marketing Specialist",
+    avatar: "https://i.pravatar.cc/100?img=12",
+  },
+  {
+    id: 5,
+    rating: 4,
     text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
     name: "Ethan Williams",
     role: "Digital Marketing Specialist",
