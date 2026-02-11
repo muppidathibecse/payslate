@@ -54,13 +54,17 @@ const DownloadSectionCard = ({
           </a>
         )}
       </div>
-      <div className="relative bottom-[-137] flex self-center ">
+      <div className="relative min-[769px]:bottom-[-137] max-[769px]:mt-3 flex self-center">
         <Image
           src={icon === "ios" ? "/Samsung Ios.png" : "/Samsung Android.png"}
           alt="App Preview"
-          className="mt-4 w-full h-auto transition-transform duration-300 ease-in-out hover:-translate-y-32"
           width={300}
           height={300}
+          className="
+      mt-4 w-full h-auto
+      min-[769px]:transition-transform min-[769px]:duration-300 min-[769px]:ease-in-out
+      min-[769px]:hover:-translate-y-32
+    "
         />
       </div>
     </section>
@@ -71,7 +75,7 @@ const DownloadAppSection = () => {
   return (
     <section
       id="download"
-      className="flex flex-col items-center gap-56.75 justify-center w-full p-6 md:p-12 2xl:px-0"
+      className="flex flex-col items-center max-[1340px]:gap-12  min-[1340px]:gap-46.75 justify-center w-full p-7 md:p-12 2xl:px-0"
     >
       <div
         className="flex flex-col items-center 2xl:w-360"
@@ -89,7 +93,7 @@ const DownloadAppSection = () => {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-20 mt-6 md:mt-20 w-full">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-20 mt-6 md:mt-20 w-full">
           {appDownloadOptions.map((option, index) => (
             <DownloadSectionCard
               key={option.platform}

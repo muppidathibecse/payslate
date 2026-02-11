@@ -9,13 +9,11 @@ import Testimonial from "../components/Testimonial";
 export default function Home() {
   return (
     <section className="bg-white w-full h-full flex flex-col overflow-hidden">
-      <Navbar />
       <HeroSection />
       <HowItWorks />
       <Features />
       <Testimonial />
-      <DownloadAppSection />
-      <Footer />
+      <DownloadAppSection />  
     </section>
   );
 }

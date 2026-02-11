@@ -70,7 +70,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="bg-footer-secondary p-8 rounded-3xl flex-1 sm:w-full w-[clamp(320px,33vw,420px)] md:w-full ">
+          <div className="hidden sm:flex sm:flex-col bg-footer-secondary p-8 rounded-3xl flex-1 sm:w-full w-[clamp(320px,33vw,420px)] md:w-full ">
             <h2 className="text-base font-semibold mb-4 uppercase tracking-wide">
               Download Our Application
             </h2>

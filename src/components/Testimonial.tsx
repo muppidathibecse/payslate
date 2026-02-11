@@ -20,7 +20,7 @@ function TestimonialCard({
   avatar: string;
 }) {
   return (
-    <article className="w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-75 flex flex-col">
+    <article className="w-full md:w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-75 flex flex-col">
       <div className="flex flex-col justify-between h-full w-full">
         <div className="space-y-4">
           <div className="flex gap-1">
@@ -33,7 +33,6 @@ function TestimonialCard({
           <p className="text-base font-normal text-muted">{text}</p>
         </div>
         <footer className="flex items-center gap-3">
-          <img src={avatar} alt={name} className="h-13 w-13 rounded-full" />
           <div>
             <p className="text-[18px] font-semibold text-text">{name}</p>
             <p className="text-base font-normal text-muted">{role}</p>
@@ -46,7 +45,6 @@ function TestimonialCard({
 
 export default function Testimonial() {
   const [index, setIndex] = useState(0);
-  const VISIBLE_CARDS = 2;
   const CARD_WIDTH = 419;
   const GAP = 24;
   const STEP = 1;
@@ -71,16 +69,14 @@ export default function Testimonial() {
             <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">
               {TestimonialData.label}
             </span>
-
             <p className="mt-4 font-bold text-text text-4xl w-full">
               {TestimonialData.title}
             </p>
-
             <p className="text-base text-muted w-full md:w-1/2">
               {TestimonialData.paragraph}
             </p>
 
-            <div className="mt-6 flex gap-3">
+            <div className="mt-6 hidden md:flex gap-3">
               <button
                 onClick={prev}
                 disabled={index === 0}
@@ -111,12 +107,9 @@ export default function Testimonial() {
               </button>
             </div>
           </header>
-          <div
-            className="overflow-hidden"
-            style={{ width: `${CARD_WIDTH * VISIBLE_CARDS + GAP}px` }}
-          >
+          <div className="overflow-hidden w-full md:max-w-215">
             <ul
-              className="flex gap-6 transition-transform duration-300 ease-in-out"
+              className="flex flex-col md:flex-row gap-6 transition-transform duration-300 ease-in-out"
               style={{
                 transform: `translateX(-${index * (CARD_WIDTH + GAP)}px)`,
               }}
@@ -129,8 +122,8 @@ export default function Testimonial() {
             </ul>
           </div>
         </div>
-        <div className="space-y-13 mt-30">
-          <p className="font-medium text-2xl text-center text-feature-text">
+        <div className="space-y-13 mt-20">
+          <p className="font-medium text-[14px] md:text-2xl text-center text-feature-text">
             Trusted by teams turning ideas into impact with iwurk
           </p>
           <LogoScrolling />

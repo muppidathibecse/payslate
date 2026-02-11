@@ -48,7 +48,7 @@ const Navbar = () => {
 
           <li>
             <Link
-              href="#download"
+              href="/#download"
               onClick={() => setActiveButton("Download App")}
             >
               <Button label="Download APP" />

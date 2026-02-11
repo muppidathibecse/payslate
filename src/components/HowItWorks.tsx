@@ -4,6 +4,7 @@ import CameraIcon from "../icons/CameraIcon";
 import DownloadIcon from "../icons/DownloadIcon";
 import FileDataIcon from "../icons/FileDataIcon";
 import { KEY_FEATUURES_CARD_STYLE } from "./home/data";
+import Link from "next/link";
 
 const steps = [
   {
@@ -46,7 +47,9 @@ const HowItWorks = () => {
             </p>
           </div>
           <div>
-            <Button label="Get Started Now" />
+            <Link href="#download">
+              <Button label="Get Started Now" />
+            </Link>
           </div>
         </header>
 
@@ -55,8 +58,7 @@ const HowItWorks = () => {
             {steps.map((step) => (
               <div
                 key={step.number}
-                className={`relative flex flex-col items-start px-15 ${KEY_FEATUURES_CARD_STYLE}`}
-
+                className={`relative flex flex-col items-start md:px-15 ${KEY_FEATUURES_CARD_STYLE}`}
               >
                 <div className="relative">
                   <span className="absolute -top-4 -left-1 select-none text-7xl font-bold leading-none text-gray-100">
@@ -80,12 +82,13 @@ const HowItWorks = () => {
 
         <div className="mt-6 w-full overflow-hidden rounded-3xl bg-[#EBEBEB]">
           <div className="aspect-video w-full bg-linear-to-br from-purple-50 to-blue-50 relative flex items-center justify-center">
-            <Image
-              src="/assets/howItWorks.gif"
-              alt="How it works demo"
-              fill
-              className="object-cover"
-              unoptimized
+            <video
+              src="/How It Works.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         </div>
