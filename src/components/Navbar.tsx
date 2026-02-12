@@ -17,7 +17,7 @@ const Navbar = () => {
       aria-label="Main navigation"
       className="flex justify-center items-center"
     >
-      <div className="absolute top-5 z-50 flex flex-row items-center gap-4 rounded-[60px] bg-white md:border md:border-[#E5E5E5] md:px-4 py-3 max-w-204 w-[90%] md:flex-row md:justify-center md:gap-0">
+      <div className="absolute md:top-5 -top-1 z-50 flex flex-row items-center gap-4 rounded-[60px] bg-white md:border md:border-[#E5E5E5] md:px-4 py-3 max-w-204 w-full px-4 md:flex-row md:justify-center md:gap-0">
         <Link href="/" className="flex items-center gap-2 md:pr-6">
           <Image src="/Brand.gif" alt="Brand" width={30} height={30} priority />
           <span className="text-black font-medium text-5">
@@ -71,7 +71,7 @@ const Navbar = () => {
       </div>
 
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-white absolute top-22 z-40 w-full px-6 py-6 space-y-5">
+        <div className="md:hidden bg-white absolute top-12 z-40 w-full px-6 py-6 space-y-5">
           {navbarLinks.map((link) => (
             <Link
               key={link.href}

@@ -7,7 +7,7 @@ export default function LogoScrolling() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   return (
     <>
-      <section className='px-4 flex-row gap-18 items-center justify-center hidden md:flex overflow-hidden h-20'>
+      <section className='px-4 md:flex overflow-hidden'>
         <div className='scroll-container '>
           {LogosData.concat(LogosData).map((customer, index) => (
             <Image 
@@ -16,8 +16,9 @@ export default function LogoScrolling() {
             onMouseLeave={() => setHoveredIndex(null)}
             src={hoveredIndex === index ? customer.coloredLogo : customer.logo}
             alt='customerIcon' 
-            width={200} 
-            height={100} />
+            width={300} 
+            height={300} 
+            className='md:w-50 w-30'/>
           ))}
         </div>
       </section>

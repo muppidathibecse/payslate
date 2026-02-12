@@ -11,10 +11,10 @@ const Features = () => (
         {details.label}
       </span>
       <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-6 mt-4">
-        <p className="font-bold text-text text-4xl w-full md:w-1/2">
+        <p className="font-bold text-text md:text-4xl text-[28px] w-full md:w-1/2">
           {details.title}
         </p>
-        <p className="text-base text-muted w-full md:w-1/2 mt-2 md:mt-0">
+        <p className="text-base md:text-[18px] text-muted w-full md:w-1/2 mt-2 md:mt-0">
           {details.description}
         </p>
       </div>

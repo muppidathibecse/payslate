@@ -1,9 +1,12 @@
 import { AppleStoreIcon } from "@/src/icons/AppStore";
 import CapgeminiLogo from "@/src/icons/CapgeminiLogo";
+import CashFlowIcon from "@/src/icons/CashFlowIcon";
+import CollaborationIcon from "@/src/icons/CollaborationIcon";
 import DecathlonLogo from "@/src/icons/DecathlonLogo";
 import GraphIcon from "@/src/icons/GraphIcon";
 import HsbcLogo from "@/src/icons/HsbcLogo";
 import LottoSocialLogo from "@/src/icons/LottoSocialLogo";
+import MaterialIcon from "@/src/icons/MaterialIcon";
 import NikeLogo from "@/src/icons/NikeLogo";
 import { PlayStoreIcon } from "@/src/icons/PlayStore";
 import TcsLogo from "@/src/icons/TcsLogo";
@@ -36,15 +39,15 @@ export const featureDetails = [
     id: 1,
     title: "Cash Flow Tracking",
     description: "Stay on top of every cash in and out across your company.",
-    icon: <GraphIcon />,
+    icon: <CashFlowIcon />,
     bg: "#F1EFFF",
   },
   {
     id: 2,
     title: "Material Book Management",
     description:
-      "Easily categorize and track all your business materials and inventory.",
-    icon: <GraphIcon />,
+      "Track materials, pricing, and stock details with precision.",
+    icon: <MaterialIcon />,
     bg: "#EFF4FF",
   },
   {
@@ -60,7 +63,7 @@ export const featureDetails = [
     title: "Multi-User Collaboration",
     description:
       "Share books securely with managers or partners using customizable permissions.",
-    icon: <GraphIcon />,
+    icon: <CollaborationIcon />,
     bg: "#FFEFFB",
   },
 ];
@@ -68,42 +71,43 @@ export const featureDetails = [
 export const featuresData = [
   {
     title: "Multi-Book Management",
-    description: "Manage cash, materials & accounts organized and auditable.",
+    description:
+      "Maintain separate books for cash, materials, and vendors — fully organized and auditable.",
     color: "#2E68FD",
     bgColor: "#ECF0FB",
   },
   {
-    title: "Cash Flow Tracking",
+    title: "Transaction Management",
     description:
-      "Monitor every inflow and outflow of cash with real-time updates.",
+      "Add income, expenses, and purchase entries instantly with category and date tracking.",
     color: "#FC4343",
     bgColor: "#FEEDED",
   },
   {
     title: "Material & Stock Control",
     description:
-      "Keep accurate records of materials, pricing, and stock levels.",
+      "Keep accurate records of procurement details, pricing, and stock availability.",
     color: "#08A965",
     bgColor: "#E5FCF2",
   },
   {
-    title: "Automated Reports",
+    title: "Vendor Ledger Tracking",
     description:
-      "Generate instant summaries for customers, vendors, and departments.",
+      "Track vendor-wise transactions, outstanding balances, and payment history.",
     color: "#3B7793",
     bgColor: "#E1F1F9",
   },
   {
-    title: "Collaborative Access",
+    title: "Role-Based Access Control",
     description:
-      "Share books securely with partners or managers using customizable permissions.",
+      "Owner, Partner, Manager, and Employee roles with customized visibility and control.",
     color: "#D77E1B",
     bgColor: "#FAEEE2",
   },
   {
     title: "Analytics Dashboard",
     description:
-      "Visualize KPIs, trends, and insights to make smarter business decisions.",
+      "View KPIs, cash trends, expense distribution, and operational insights in real time.",
     color: "#932EFA",
     bgColor: "#F4EDFC",
   },
@@ -111,9 +115,9 @@ export const featuresData = [
 
 export const details = {
   label: "Key Features",
-  title: "All-in-one platform to manage your company finances",
+  title: "All-in-One Platform to Manage Industrial Business Finance",
   description:
-    "Payslate simplifies financial operations by combining cash flow management, material tracking, and business accounts in one secure, real-time system.",
+    "Payslate simplifies financial operations by combining cash flow management, material tracking, vendor records, and structured permissions in one powerful system.",
 };
 
 export const KEY_FEATUURES_CARD_STYLE =
@@ -121,9 +125,9 @@ export const KEY_FEATUURES_CARD_STYLE =
 
 export const TestimonialData = {
   label: "TESTIMONIAL",
-  title: "We've build trust with reviews from real users",
+  title: "Trusted by Industrial Business Owners",
   paragraph:
-    "Boost your credibility by featuring genuine testimonials from realusers.",
+    "Experience a finance management app built for operational clarity and team transparency. No confusion, no scattered records — just structured financial control.",
 };
 
 export const Logos = [
@@ -152,74 +156,69 @@ export const Logos = [
 
 export const LogosData = [
   {
-    customerName: 'DECATHLON',
-    logo: '/assets/icons/companyLogos/decathlonIcon.svg',
-    coloredLogo: '/assets/icons/companyLogos/decathlonColoredIcon.svg',
+    customerName: "DECATHLON",
+    logo: "/assets/icons/companyLogos/decathlonIcon.svg",
+    coloredLogo: "/assets/icons/companyLogos/decathlonColoredIcon.svg",
   },
   {
-    customerName: 'XEROX',
-    logo: '/assets/icons/companyLogos/xeroxIcon.svg',
-    coloredLogo: '/assets/icons/companyLogos/xeroxColoredIcon.svg',
+    customerName: "XEROX",
+    logo: "/assets/icons/companyLogos/xeroxIcon.svg",
+    coloredLogo: "/assets/icons/companyLogos/xeroxColoredIcon.svg",
   },
   {
-    customerName: 'HSBC',
-    logo: '/assets/icons/companyLogos/hsbcIcon.svg',
-    coloredLogo: '/assets/icons/companyLogos/hsbcColoredIcon.svg',
+    customerName: "HSBC",
+    logo: "/assets/icons/companyLogos/hsbcIcon.svg",
+    coloredLogo: "/assets/icons/companyLogos/hsbcColoredIcon.svg",
   },
   {
-    customerName: 'NIKE',
-    logo: '/assets/icons/companyLogos/nikeIcon.svg',
-    coloredLogo: '/assets/icons/companyLogos/nikeColoredIcon.svg',
+    customerName: "TCS",
+    logo: "/assets/icons/companyLogos/tcsIcon.svg",
+    coloredLogo: "/assets/icons/companyLogos/tcsColoredIcon.svg",
   },
   {
-    customerName: 'TCS',
-    logo: '/assets/icons/companyLogos/tcsIcon.svg',
-    coloredLogo: '/assets/icons/companyLogos/tcsColoredIcon.svg',
+    customerName: "CAPGEMINI",
+    logo: "/assets/icons/companyLogos/capgeminiIcon.svg",
+    coloredLogo: "/assets/icons/companyLogos/capgeminiColoredIcon.svg",
   },
   {
-    customerName: 'CAPGEMINI',
-    logo: '/assets/icons/companyLogos/capgeminiIcon.svg',
-    coloredLogo: '/assets/icons/companyLogos/capgeminiColoredIcon.svg',
+    customerName: "LOTTOSOCIAL",
+    logo: "/assets/icons/companyLogos/lottoSocialIcon.svg",
+    coloredLogo: "/assets/icons/companyLogos/lottoSocialColoredIcon.svg",
   },
-  {
-    customerName: 'LOTTOSOCIAL',
-    logo: '/assets/icons/companyLogos/lottoSocialIcon.svg',
-    coloredLogo: '/assets/icons/companyLogos/lottoSocialColoredIcon.svg',
-  },
-]
+];
 
 export const TESTIMONIALS = [
   {
     id: 1,
     rating: 5,
-    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
-    name: "Ethan Williams",
-    role: "Digital Marketing Specialist",
+    text: "Payslate completely changed how we manage our daily cash and expenses. Everything is now recorded properly and easy to track, giving our partners full financial visibility without constant follow-ups. It has made our financial workflow more structured, transparent, and professional.",
+    name: "Deepak Gowda",
+    role: "Manufacturing Business Owner",
     avatar: "https://i.pravatar.cc/100?img=12",
   },
   {
     id: 2,
     rating: 2,
-    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
-    name: "Ethan Williams",
-    role: "Digital Marketing Specialist",
+    text: "We used to manage materials and vendor payments manually, which often created confusion. With Payslate, everything is organized in one place with clear transaction history and accurate records. It gives us better control, accountability, and confidence in our financial decisions.",
+    name: "Arjun Mehta",
+    role: "Industrial Contractor",
     avatar: "https://i.pravatar.cc/100?img=12",
   },
   {
     id: 3,
     rating: 4,
-    text: "Experience a payment app built on simplicity and transparency. No hidden fees, just a seamless user experience that makes every transaction easy and stress-free. Say goodbye to confusion and hello to straightforward payments.",
-    name: "Ethan Williams",
-    role: "Digital Marketing Specialist",
+    text: "The role-based access feature fits perfectly with our company structure. Employees can add transactions while management monitors operations in real time. Cash flow tracking is now accurate, secure, and saves us hours of manual verification every week.",
+    name: "Sandeep Sharma",
+    role: "Operations Manager",
     avatar: "https://i.pravatar.cc/100?img=12",
   },
 ];
 
 export const DownloadAppSectionData = {
   label: "Download App",
-  subheading: "All-in-one platform to manage your company finances",
+  subheading: "Manage Cash, Materials & Vendors — All in One App",
   paragraph:
-    "Payslate simplifies financial operations by combining cash flow management, material tracking, and business accounts in one secure, real-time system.",
+    "Payslate is designed for industrial businesses that need structured financial workflows, secure collaboration, and real-time visibility.",
 };
 
 export const appDownloadOptions = [
@@ -227,7 +226,7 @@ export const appDownloadOptions = [
     platform: "ios",
     title: "Download for iOS",
     description:
-      "The best finance app ever built on Apple. Get it on the App Store.",
+      "Track transactions, manage materials, and monitor vendors securely on your iPhone.",
     ctaLabel: "App Store",
     storeUrl: "https://apps.apple.com/in/app/payslate/id6737227735",
   },
@@ -235,7 +234,7 @@ export const appDownloadOptions = [
     platform: "android",
     title: "Download for Android",
     description:
-      "The best finance app ever built on Google. Get it on Google Play.",
+      "Complete financial control for your industrial business — anytime, anywhere.",
     ctaLabel: "Play Store",
     storeUrl:
       "https://play.google.com/store/apps/details?id=com.dotmite.payslate",
@@ -243,14 +242,16 @@ export const appDownloadOptions = [
 ];
 
 export const navLinks1 = [
-  { label: "Home", href: "/#home" },
-  { label: "Features", href: "/#features" },
-  { label: "About", href: "/#about" },
+  { label: "home", href: "/#home" },
+  { label: "features", href: "/#feat" },
+  { label: "about", href: "/#about" },
+  { label: "how it Works", href: "/#how-it-works" },
 ];
 
 export const navLinks2 = [
-  { label: "How it Works", href: "/#how-it-works" },
-  { label: "Privacy policy", href: "/privacy" },
+  { label: "key features", href: "/#features" },
+  { label: "testimonial", href: "/#testimonial" },
+  { label: "privacy policy", href: "/privacy" },
   { label: "term and conditions", href: "/termsandcondition" },
 ];
 

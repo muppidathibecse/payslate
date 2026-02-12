@@ -20,7 +20,7 @@ function TestimonialCard({
   avatar: string;
 }) {
   return (
-    <article className="w-full md:w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-75 flex flex-col">
+    <article className="w-full md:w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-90 flex flex-col">
       <div className="flex flex-col justify-between h-full w-full">
         <div className="space-y-4">
           <div className="flex gap-1">
@@ -32,7 +32,7 @@ function TestimonialCard({
           </div>
           <p className="text-base font-normal text-muted">{text}</p>
         </div>
-        <footer className="flex items-center gap-3">
+        <footer className="flex items-center gap-3 mt-7">
           <div>
             <p className="text-[18px] font-semibold text-text">{name}</p>
             <p className="text-base font-normal text-muted">{role}</p>
@@ -69,10 +69,10 @@ export default function Testimonial() {
             <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">
               {TestimonialData.label}
             </span>
-            <p className="mt-4 font-bold text-text text-4xl w-full">
+            <p className="mt-4 font-bold text-text md:text-4xl text-[28px] w-full">
               {TestimonialData.title}
             </p>
-            <p className="text-base text-muted w-full md:w-1/2">
+            <p className="text-[16px] md:text-[18px] text-muted w-full md:w-107">
               {TestimonialData.paragraph}
             </p>
 
@@ -122,9 +122,9 @@ export default function Testimonial() {
             </ul>
           </div>
         </div>
-        <div className="space-y-13 mt-20">
+        <div className="mt-10 flex flex-col gap-15">
           <p className="font-medium text-[14px] md:text-2xl text-center text-feature-text">
-            Trusted by teams turning ideas into impact with iwurk
+            Trusted by Growing Businesses Powered by Payslate
           </p>
           <LogoScrolling />
         </div>

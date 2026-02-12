@@ -11,14 +11,14 @@ const steps = [
     number: "01",
     title: "Create Your Business Profile",
     description:
-      "Set up your business in Payslate and add business details in minutes.",
+      "Set up your industrial business in minutes and define roles for your team.",
     icon: <DownloadIcon />,
   },
   {
     number: "02",
-    title: "Add Books and Types",
+    title: "Create Books & Categories",
     description:
-      "Organize finances with dedicated books for cash flow, stock/materials, and accounts.",
+      "Organize operations with dedicated Cash Book, Material Book, and Vendor records.",
     icon: <FileDataIcon />,
   },
   {
@@ -37,13 +37,13 @@ const HowItWorks = () => {
       className="bg-[#F6F6F6] flex items-center justify-center p-6 md:p-12 2xl:px-0"
     >
       <div className="mx-auto w-full 2xl:w-360">
-        <header className="mb-16 flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+        <header className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <div className="max-w-2xl">
             <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">
               How it works
             </span>
-            <p className="mt-1 font-bold text-text text-4xl w-full md:w-137">
-              Make payments, transfers, and more in 3 simple steps
+            <p className="mt-1 font-bold text-text md:text-4xl text-[28px] w-full md:w-137">
+              Manage Your Business Finances in 3 Simple Steps
             </p>
           </div>
           <div>

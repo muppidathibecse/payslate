@@ -7,8 +7,8 @@
   --text-secondary: #4d525f;
   --brand-primary: #804fb0;
   --brand-secondry: #932efa;
-  --feature-muted: #CFD0D1;
-  --feature-text: #6B7280;
+  --feature-muted: #cfd0d1;
+  --feature-text: #6b7280;
   --footer-primary: #1a1a1a;
   --footer-secondary: #3a3a3a;
 
@@ -97,7 +97,6 @@ body {
   font-family: var(--font-urbanist), Arial, Helvetica, sans-serif;
 }
 
-
 .scroll-container {
   display: flex;
   gap: 4.5rem;
@@ -115,5 +114,11 @@ body {
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-container {
+    animation-duration: 15s;
   }
 }

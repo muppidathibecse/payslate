@@ -8,12 +8,15 @@ import Testimonial from "../components/Testimonial";
 
 export default function Home() {
   return (
-    <section className="bg-white w-full h-full flex flex-col overflow-hidden">
+    <section
+      id="home"
+      className="bg-white w-full h-full flex flex-col overflow-hidden"
+    >
       <HeroSection />
       <HowItWorks />
       <Features />
       <Testimonial />
-      <DownloadAppSection />  
+      <DownloadAppSection />
     </section>
   );
 }

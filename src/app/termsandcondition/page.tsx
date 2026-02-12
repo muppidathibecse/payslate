@@ -1,9 +1,4 @@
 import {
-  Heading,
-  List,
-  Paragraph,
-} from "@/src/components/privacyPolicyComponents/PrivacyPolicyFormat";
-import {
   Description,
   IntellectualPropertyDescription,
   LiabilityDescription,
@@ -24,12 +19,18 @@ import {
   WarrantiesDescription,
 } from "@/src/components/privacyPolicyComponents/termsData";
 
+import {
+  Heading,
+  List,
+  Paragraph,
+} from "@/src/components/privacyPolicyComponents/PrivacyPolicyFormat";
+
 const page = () => {
   return (
-    <section className="flex justify-center w-full p-6 md:p-12 md:pt-25 2xl:px-0">
-      <div className="w-full flex flex-col 2xl:w-360">
+    <section className="flex justify-center w-full px-4 pt-15 md:pt-25 2xl:px-0">
+      <div className="w-full flex flex-col 2xl:w-360 mb-20">
         <span className="text-[#932EFA] text-base font-semibold">PAYSLATE</span>
-        <span className="text-[#01081B] text-[40px] font-bold">
+        <span className="text-[#01081B] text-[20px] sm:text-[30px] md:text-[40px] font-bold">
           Terms and Conditions
         </span>
         <span className="text-[#01081B99] text-base font-normal mb-10">

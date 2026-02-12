@@ -27,7 +27,7 @@ const DownloadSectionCard = ({
 }) => {
   return (
     <section
-      className={`flex flex-col justify-between items-start relative text-text px-12 pt-12 pb-0 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 overflow-hidden ${className}`}
+      className={`flex flex-col justify-between items-start relative text-text px-12 py-12 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 overflow-hidden ${className}`}
     >
       <div aria-labelledby="download-app-section-title">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">{label}</h2>
@@ -54,7 +54,7 @@ const DownloadSectionCard = ({
           </a>
         )}
       </div>
-      <div className="relative min-[769px]:bottom-[-137] max-[769px]:mt-3 flex self-center">
+      <div className="relative hidden md:flex self-center -bottom-35">
         <Image
           src={icon === "ios" ? "/Samsung Ios.png" : "/Samsung Android.png"}
           alt="App Preview"
@@ -62,8 +62,8 @@ const DownloadSectionCard = ({
           height={300}
           className="
       mt-4 w-full h-auto
-      min-[769px]:transition-transform min-[769px]:duration-300 min-[769px]:ease-in-out
-      min-[769px]:hover:-translate-y-32
+      transition-transform duration-300 ease-in-out
+      hover:-translate-y-32
     "
         />
       </div>
@@ -85,10 +85,10 @@ const DownloadAppSection = () => {
           {DownloadAppSectionData.label}
         </span>
         <div className="flex flex-col md:flex-row md:justify-between gap-3 md:gap-6 mt-4">
-          <p className="font-bold text-text text-4xl w-full md:w-1/2">
+          <p className="font-bold text-text md:text-4xl text-[28px] w-full md:max-w-140">
             {DownloadAppSectionData.subheading}
           </p>
-          <p className="text-base text-muted w-full md:w-1/2 mt-2 md:mt-0">
+          <p className="text-[16px] md:text-[18px] text-muted w-full md:w-1/2 mt-2 md:mt-0">
             {DownloadAppSectionData.paragraph}
           </p>
         </div>
