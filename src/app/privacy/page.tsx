@@ -1,21 +1,7 @@
 import {
-  AnalyticsDescription,
-  ChangesPrivacyPolicyDescription,
-  ChildrenPrivacyDescription,
-  DefinitionsList,
   Description,
-  DotmiteTechnologiesData,
-  LegalRequirementsData,
-  LegalRequirementsDescription,
-  MobileDeviceData,
-  PersonalData,
-  RetentionDataDescription,
-  SecurityDataDescription,
-  ServiceProvidersData,
-  ShareDataDescription,
-  TransferDataDescription,
-  UsageData,
-  UserRightsData,
+  PRIVACY_POLICY_DATA,
+  PrivacyHeader,
 } from "@/src/components/privacyPolicyComponents/privacyPolicyData";
 
 import {
@@ -29,57 +15,36 @@ const page = () => {
     <section className="flex justify-center w-full px-4 pt-18 md:pt-25 2xl:px-0">
       <div className="w-full flex flex-col 2xl:w-360 mb-20">
         <span className="text-secondary text-[16px] font-semibold">
-          PAYSLATE
+          {PrivacyHeader.label}
         </span>
         <h1 className="text-text text-[20px] sm:text-[30px] md:text-[40px] font-bold">
-          Privacy Policy
+          {PrivacyHeader.heading}
         </h1>
         <span className="text-text-1 text-[16px] font-normal mb-10">
-          Effective January 10, 2026
+         {PrivacyHeader.date}
         </span>
         <Paragraph label={Description} />
-        <Heading label="Definitions" />
-        <List items={DefinitionsList} type="ul" />
-        <Heading label="Information We Collect and Its Use" />
-        <Paragraph label="Information You Provide Directly" />
-        <Paragraph label="While using our Service, we may ask you to provide certain personally identifiable information, including but not limited to:" />
-        <List items={PersonalData} type="ul" />
-        <Heading label="Usage Data" />
-        <Paragraph label="We may also collect information automatically when you use our Service, such as:" />
-        <List items={UsageData} type="ul" />
-        <Heading label="When accessing the Service through a mobile device, this Usage Data may include:" />
-        <List items={MobileDeviceData} type="ul" />
-        <Heading label="Cookies Information" />
-        <Paragraph label="We use cookies and similar tracking technologies to monitor activity on our Service and store certain information. You can control cookie preferences through your browser settings, but some parts of the Service may not function properly if you disable cookies." />
-        <Heading label="Dotmite Technologies Private Limited uses the collected data to:" />
-        <List items={DotmiteTechnologiesData} type="ol" />
-        <Heading label="Retention of Data" />
-        <Paragraph label={RetentionDataDescription} />
-        <Heading label="Transfer of Data" />
-        <Paragraph label={TransferDataDescription} />
-        <Heading label="Who You May Choose to Share Your Data With" />
-        <Paragraph label={ShareDataDescription} />
-        <Heading label="Disclosure for Legal Requirements" />
-        <Paragraph label={LegalRequirementsDescription} />
-        <List items={LegalRequirementsData} type="ul" />
-        <Heading label="Security of Data" />
-        <Paragraph label={SecurityDataDescription} />
-        <Heading label="Service Providers" />
-        <Paragraph label="We may employ third-party companies to:" />
-        <List items={ServiceProvidersData} type="ul" />
-        <Paragraph label="These third parties only have access to your Personal Data for these tasks and are obligated not to disclose or use it for other purposes." />
-        <Heading label="Analytics" />
-        <Paragraph label={AnalyticsDescription} />
-        <Heading label="Children's Privacy" />
-        <Paragraph label={ChildrenPrivacyDescription} />
-        <Heading label="Your Privacy Rights" />
-        <Paragraph label="You have the right to:" />
-        <List items={UserRightsData} type="ul" />
-        <Heading label="Changes to This Privacy Policy" />
-        <Paragraph label={ChangesPrivacyPolicyDescription} />
-        <Heading label="Contact Us" />
-        <Paragraph label="For questions or concerns about this Privacy Policy, contact us at:" />
-        <Paragraph label="Email: support@dotmite.com" />
+        {PRIVACY_POLICY_DATA.map((section) => (
+          <section key={section.id}>
+            <Heading label={section.heading} />
+            {section.data.map((item, index) => {
+              switch (item.type) {
+                case "Paragraph":
+                  return <Paragraph key={index} label={item.data as string} />;
+                case "List":
+                  return (
+                    <List
+                      key={index}
+                      items={item.data as string[]}
+                      type={item.listType as "ul" | "ol"}
+                    />
+                  );
+                default:
+                  return null;
+              }
+            })}
+          </section>
+        ))}
       </div>
     </section>
   );

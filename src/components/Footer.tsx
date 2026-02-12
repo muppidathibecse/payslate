@@ -32,8 +32,11 @@ export default function Footer() {
             <span className="text-primary">slate</span>
           </div>
           <div className="flex flex-row gap-3 relative z-50">
-            {SocialMediaData.map((item) => (
-              <div className="h-8 w-8 md:h-9 md:w-9 rounded-full bg-text-2 flex justify-center items-center cursor-pointer">
+            {SocialMediaData.map((item, index) => (
+              <div
+                key={index}
+                className="h-8 w-8 md:h-9 md:w-9 rounded-full bg-text-2 flex justify-center items-center cursor-pointer"
+              >
                 <Image
                   src={item.icon}
                   alt={`${item.name} icon`}
