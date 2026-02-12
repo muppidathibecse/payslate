@@ -5,7 +5,7 @@ type ListProps = {
 
 export const Heading: React.FC<{ label: string }> = ({ label }) => {
   return (
-    <h1 className="text-[#804FB0] text-base font-semibold mt-6">{label}</h1>
+    <h1 className="text-primary text-base font-semibold mt-6">{label}</h1>
   );
 };
 
@@ -16,10 +16,10 @@ export const Paragraph: React.FC<{ label: string; className?: string }> = ({
   const parts = label.split(/(support@dotmite.com)/gi);
 
   return (
-    <p className={`${className} text-[#0D0D0D] text-base font-normal`}>
+    <p className={`${className} text-text-3 text-base font-normal text-justify`}>
       {parts.map((part, index) =>
         part.toLowerCase() === "support@dotmite.com" ? (
-          <span key={index} className="text-[#804FB0] font-medium underline cursor-pointer">
+          <span key={index} className="text-primary font-medium underline cursor-pointer">
             {part}
           </span>
         ) : (
@@ -35,7 +35,7 @@ export const List: React.FC<ListProps> = ({ items, type }) => {
   return (
     <ListTag className={`pl-6 ${type === "ul" ? "list-disc" : "list-decimal"}`}>
       {items.map((item, index) => (
-        <li key={index} className="text-base text-[#0D0D0D]">
+        <li key={index} className="text-base text-text-3">
           {item}
         </li>
       ))}

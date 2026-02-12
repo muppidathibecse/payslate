@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+
 import React, { useEffect, useRef, useState } from "react";
+
 import { motion } from "framer-motion";
 import { avatarDetails, featureDetails } from "../data";
 import HeroContent from "./HeroContent";
@@ -10,7 +12,6 @@ import HeroSmallScreen from "./HeroSmallScreen";
 const HeroSection = () => {
   const featuresContainerRef = useRef<HTMLDivElement>(null);
   const heroImageRef = useRef<HTMLDivElement>(null);
-
   const [isMoveAnimation, setIsMoveAnimation] = useState(false);
   const [move, setMove] = useState({ x: 0, y: 0 });
   const [isLargeScreen, setIsLargeScreen] = useState(false);
@@ -123,7 +124,7 @@ const HeroSection = () => {
                   <p className="text-primary font-bold">+1,35,890.00</p>
                   <div className="flex justify-between">
                     <p className="text-muted text-[14px]">1th Jan, 2025</p>
-                    <p className="text-[#37C390] text-[14px]">
+                    <p className="text-green-1 text-[14px]">
                       Synced in Real-Time ✅
                     </p>
                   </div>
@@ -168,12 +169,12 @@ const HeroSection = () => {
                     duration: 1,
                     ease: "easeOut",
                   }}
-                  className="text-[#932EFA] font-semibold leading-[150%]"
+                  className="text-secondary font-semibold leading-[150%]"
                 >
                   Features
                 </motion.h1>
               ) : (
-                <h1 className="text-[#932EFA] font-semibold leading-[150%]">
+                <h1 className="text-secondary font-semibold leading-[150%]">
                   Features
                 </h1>
               )}
@@ -240,7 +241,7 @@ const HeroSection = () => {
                         {feature.title}
                       </h3>
                     </div>
-                    <p className="text-[#0D0D0D] leading-6">
+                    <p className="text-text-3 leading-6">
                       {feature.description}
                     </p>
                   </motion.div>
@@ -279,7 +280,7 @@ const HeroSection = () => {
                         {feature.title}
                       </h3>
                     </div>
-                    <p className="text-[#0D0D0D] leading-6">
+                    <p className="text-text-3 leading-6">
                       {feature.description}
                     </p>
                   </motion.div>

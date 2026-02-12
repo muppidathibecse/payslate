@@ -1,15 +1,11 @@
 import Image from "next/image";
-import Facebook from "../icons/Facebook";
-import Insta from "../icons/Insta";
-import LinkedIn from "../icons/LinkedIn";
-import Button from "./Button";
-import { buttons, navLinks1, navLinks2 } from "./home/data";
-import Link from "next/link";
+
+import { navLinks1, navLinks2, SocialMediaData } from "./home/data";
 
 export default function Footer() {
   return (
-    <footer className="relative bg-[linear-gradient(180deg,#0A0123_45.45%,#0E0229_100%)] text-white flex flex-col justify-center items-center overflow-hidden">
-      <div className="w-full relative 2xl:w-360 z-0  p-7 md:p-12 2xl:px-0 ">
+    <footer className="relative bg-gradient-primary mt-20 text-white flex flex-col justify-center items-center overflow-hidden">
+      <div className="w-full relative 2xl:w-360 z-0  p-4 md:p-12 2xl:px-0">
         <div className="absolute -top-8 -right-20 z-10 max-[837px]:hidden">
           <Image
             src="/assets/footerBg.gif"
@@ -36,36 +32,18 @@ export default function Footer() {
             <span className="text-primary">slate</span>
           </div>
           <div className="flex flex-row gap-3 relative z-50">
-            <div className="h-8 w-8 md:h-9 md:w-9 rounded-full bg-[#0D0D0D80] flex justify-center items-center cursor-pointer">
-              <Image
-                src="/assets/icons/socialMediaIcons/instagramIcon.svg"
-                alt="social media icon"
-                className="w-4 h-4 md:w-[20px] md:h-[20px]"
-                width={20}
-                height={20}
-                priority
-              />
-            </div>
-            <div className="h-8 w-8 md:h-9 md:w-9 rounded-full bg-[#0D0D0D80] flex justify-center items-center cursor-pointer">
-              <Image
-                src="/assets/icons/socialMediaIcons/facebookIcon.svg"
-                alt="social media icon"
-                className="w-4 h-4 md:w-[20px] md:h-[20px]"
-                width={20}
-                height={20}
-                priority
-              />
-            </div>
-            <div className="h-8 w-8 md:h-9 md:w-9 rounded-full bg-[#0D0D0D80] flex justify-center items-center cursor-pointer">
-              <Image
-                src="/assets/icons/socialMediaIcons/linkedinIcon.svg"
-                alt="social media icon"
-                className="w-4 h-4 md:w-[20px] md:h-[20px]"
-                width={20}
-                height={20}
-                priority
-              />
-            </div>
+            {SocialMediaData.map((item) => (
+              <div className="h-8 w-8 md:h-9 md:w-9 rounded-full bg-text-2 flex justify-center items-center cursor-pointer">
+                <Image
+                  src={item.icon}
+                  alt={`${item.name} icon`}
+                  className="w-4 h-4 md:w-[20px] md:h-[20px]"
+                  width={20}
+                  height={20}
+                  priority
+                />
+              </div>
+            ))}
           </div>
         </div>
         <div className="w-full relative z-10 flex flex-col lg:flex-row gap-[15vw]">

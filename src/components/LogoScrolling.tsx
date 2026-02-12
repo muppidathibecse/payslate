@@ -1,6 +1,8 @@
 'use client'
+
 import Image from 'next/image'
 import { useState} from 'react';
+
 import { LogosData } from './home/data';
 
 export default function LogoScrolling() {
@@ -18,7 +20,7 @@ export default function LogoScrolling() {
             alt='customerIcon' 
             width={300} 
             height={300} 
-            className='md:w-50 w-30'/>
+            className='md:w-50 w-25'/>
           ))}
         </div>
       </section>

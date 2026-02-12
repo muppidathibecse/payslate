@@ -1,3 +1,4 @@
+import AppleLogo from "@/src/icons/AppleLogo";
 import { AppleStoreIcon } from "@/src/icons/AppStore";
 import CapgeminiLogo from "@/src/icons/CapgeminiLogo";
 import CashFlowIcon from "@/src/icons/CashFlowIcon";
@@ -9,6 +10,7 @@ import LottoSocialLogo from "@/src/icons/LottoSocialLogo";
 import MaterialIcon from "@/src/icons/MaterialIcon";
 import NikeLogo from "@/src/icons/NikeLogo";
 import { PlayStoreIcon } from "@/src/icons/PlayStore";
+import PlayStoreLogo from "@/src/icons/PlayStoreLogo";
 import TcsLogo from "@/src/icons/TcsLogo";
 import XeroxLogo from "@/src/icons/XeroxLogo";
 
@@ -194,7 +196,6 @@ export const TESTIMONIALS = [
     text: "Payslate completely changed how we manage our daily cash and expenses. Everything is now recorded properly and easy to track, giving our partners full financial visibility without constant follow-ups. It has made our financial workflow more structured, transparent, and professional.",
     name: "Deepak Gowda",
     role: "Manufacturing Business Owner",
-    avatar: "https://i.pravatar.cc/100?img=12",
   },
   {
     id: 2,
@@ -202,7 +203,6 @@ export const TESTIMONIALS = [
     text: "We used to manage materials and vendor payments manually, which often created confusion. With Payslate, everything is organized in one place with clear transaction history and accurate records. It gives us better control, accountability, and confidence in our financial decisions.",
     name: "Arjun Mehta",
     role: "Industrial Contractor",
-    avatar: "https://i.pravatar.cc/100?img=12",
   },
   {
     id: 3,
@@ -210,7 +210,6 @@ export const TESTIMONIALS = [
     text: "The role-based access feature fits perfectly with our company structure. Employees can add transactions while management monitors operations in real time. Cash flow tracking is now accurate, secure, and saves us hours of manual verification every week.",
     name: "Sandeep Sharma",
     role: "Operations Manager",
-    avatar: "https://i.pravatar.cc/100?img=12",
   },
 ];
 
@@ -268,5 +267,38 @@ export const buttons = [
     className: "uppercase font-medium text-sm",
     icon: <PlayStoreIcon />,
     storeUrl: "https://apps.apple.com/in/app/payslate/id6737227735",
+  },
+];
+
+export const SocialMediaData = [
+  {
+    name: "instagram",
+    icon: "/assets/icons/socialMediaIcons/instagramIcon.svg",
+    link: "https://www.instagram.com/",
+  },
+  {
+    name: "facebook",
+    icon: "/assets/icons/socialMediaIcons/facebookIcon.svg",
+    link: "https://www.facebook.com/",
+  },
+  {
+    name: "linkedin",
+    icon: "/assets/icons/socialMediaIcons/linkedinIcon.svg",
+    link: "https://www.linkedin.com/",
+  },
+];
+
+export const DownloadOptionData = [
+  {
+    label: "Download on the",
+    name: "App Store",
+    link: "https://apps.apple.com/in/app/payslate/id6737227735",
+    icon: <AppleLogo />,
+  },
+  {
+    label: "GET IT ON",
+    name: "Google Play",
+    link: "https://play.google.com/store/apps/details?id=com.dotmite.payslate",
+    icon: <PlayStoreLogo />,
   },
 ];

@@ -1,9 +1,11 @@
 "use client";
+
 import { useState } from "react";
+
 import { CardMovingIconColored } from "../icons/CardMovingIconColored";
 import { CardMovingIcon } from "../icons/PreviousCardIcon";
 import { RatingsStarIcon } from "../icons/RatingsStarIcon";
-import { Logos, TestimonialData, TESTIMONIALS } from "./home/data";
+import { TestimonialData, TESTIMONIALS } from "./home/data";
 import LogoScrolling from "./LogoScrolling";
 
 function TestimonialCard({
@@ -11,16 +13,14 @@ function TestimonialCard({
   text,
   name,
   role,
-  avatar,
 }: {
   rating: number;
   text: string;
   name: string;
   role: string;
-  avatar: string;
 }) {
   return (
-    <article className="w-full md:w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-90 flex flex-col">
+    <article className="w-full md:w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-80 flex flex-col">
       <div className="flex flex-col justify-between h-full w-full">
         <div className="space-y-4">
           <div className="flex gap-1">
@@ -32,7 +32,7 @@ function TestimonialCard({
           </div>
           <p className="text-base font-normal text-muted">{text}</p>
         </div>
-        <footer className="flex items-center gap-3 mt-7">
+        <footer className="flex items-center gap-3 mt-5">
           <div>
             <p className="text-[18px] font-semibold text-text">{name}</p>
             <p className="text-base font-normal text-muted">{role}</p>
@@ -61,7 +61,7 @@ export default function Testimonial() {
   return (
     <section
       id="testimonial"
-      className="overflow-hidden bg-[#F6F6F6] p-6 md:p-12 w-full"
+      className="overflow-hidden bg-white-4 p-4 md:p-12 w-full"
     >
       <div className="mx-auto 2xl:w-360">
         <div className="flex flex-col justify-between gap-10 lg:flex-row">

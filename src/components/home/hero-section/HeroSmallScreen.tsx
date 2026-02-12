@@ -1,7 +1,10 @@
+import Image from "next/image";
+
 import React from "react";
+
 import HeroContent from "./HeroContent";
 import { avatarDetails, featureDetails } from "../data";
-import Image from "next/image";
+
 
 const HeroSmallScreen = () => {
   return (
@@ -41,7 +44,7 @@ const HeroSmallScreen = () => {
                   <p className="text-text font-semibold">Book Created</p>
                   <p className="text-primary font-bold">+1,35,890.00</p>
                   <div className="flex justify-between">
-                    <p className="text-[#37C390] text-[14px]">
+                    <p className="text-green-1 text-[14px]">
                       Synced in Real-Time ✅
                     </p>
                   </div>
@@ -66,7 +69,7 @@ const HeroSmallScreen = () => {
       >
         <div className="w-full h-full flex flex-col px-4 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
           <div className="flex flex-col gap-1">
-            <h1 className="text-[#932EFA] font-semibold leading-[150%]">
+            <h1 className="text-secondary font-semibold leading-[150%]">
               Features
             </h1>
             <div className="w-full flex flex-col gap-5 justify-between">
@@ -100,7 +103,7 @@ const HeroSmallScreen = () => {
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-[#0D0D0D] leading-6">
+                  <p className="text-text-3 leading-6">
                     {feature.description}
                   </p>
                 </div>
@@ -121,7 +124,7 @@ const HeroSmallScreen = () => {
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-[#0D0D0D] leading-6">
+                  <p className="text-text-3 leading-6">
                     {feature.description}
                   </p>
                 </div>

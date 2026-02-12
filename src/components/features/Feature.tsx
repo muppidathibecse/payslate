@@ -1,10 +1,15 @@
-import { details, featuresData, KEY_FEATUURES_CARD_STYLE } from "../home/data";
+import {
+  details,
+  featuresData,
+  KEY_FEATUURES_CARD_STYLE,
+} from "@/src/components/home/data";
+
 import Card from "./Card";
 
 const Features = () => (
   <section
     id="features"
-    className="flex justify-center w-full p-6 md:p-12 2xl:px-0"
+    className="flex justify-center w-full p-4 md:p-12 2xl:px-0"
   >
     <div className="w-full flex flex-col justify-center items-center 2xl:w-360">
       <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">
@@ -18,7 +23,6 @@ const Features = () => (
           {details.description}
         </p>
       </div>
-
       <ul className="py-5 w-full grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3 rounded-2xl mt-6 md:mt-10 bg-[url('/assets/imageBg.png')] bg-cover bg-center bg-no-repeat">
         {featuresData.map((feature, index) => (
           <li key={index} className={KEY_FEATUURES_CARD_STYLE}>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import Button from "./Button";
 import { AppleStoreIcon } from "../icons/AppleStoreIcon";
 import { PlayStoreIcon } from "../icons/PlayStoreIcon";
@@ -75,7 +76,7 @@ const DownloadAppSection = () => {
   return (
     <section
       id="download"
-      className="flex flex-col items-center max-[1340px]:gap-12  min-[1340px]:gap-46.75 justify-center w-full p-7 md:p-12 2xl:px-0"
+      className="flex flex-col items-center max-[1340px]:gap-10  min-[1340px]:gap-46.75 justify-center w-full p-4 md:p-12 2xl:px-0"
     >
       <div
         className="flex flex-col items-center 2xl:w-360"
@@ -102,8 +103,8 @@ const DownloadAppSection = () => {
               subheading={option.description}
               ctaLabel={option.ctaLabel}
               ctaLink={option.storeUrl}
-              className={`border border-[#D8D8D8] ${
-                index % 2 === 0 ? "bg-[#F7F8FD]" : "bg-[#FEFCF9]"
+              className={`border border-white-3 ${
+                index % 2 === 0 ? "bg-white-2" : "bg-white-1"
               }`}
             />
           ))}

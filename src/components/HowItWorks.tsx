@@ -1,10 +1,10 @@
-import Image from "next/image";
+import Link from "next/link";
+
 import Button from "./Button";
+import { KEY_FEATUURES_CARD_STYLE } from "./home/data";
 import CameraIcon from "../icons/CameraIcon";
 import DownloadIcon from "../icons/DownloadIcon";
 import FileDataIcon from "../icons/FileDataIcon";
-import { KEY_FEATUURES_CARD_STYLE } from "./home/data";
-import Link from "next/link";
 
 const steps = [
   {
@@ -34,7 +34,7 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="bg-[#F6F6F6] flex items-center justify-center p-6 md:p-12 2xl:px-0"
+      className="bg-white-4 flex items-center justify-center p-4 md:p-12 2xl:px-0"
     >
       <div className="mx-auto w-full 2xl:w-360">
         <header className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
@@ -80,7 +80,7 @@ const HowItWorks = () => {
           </div>
         </div>
 
-        <div className="mt-6 w-full overflow-hidden rounded-3xl bg-[#EBEBEB]">
+        <div className="mt-6 w-full overflow-hidden rounded-3xl bg-white-5">
           <div className="aspect-video w-full bg-linear-to-br from-purple-50 to-blue-50 relative flex items-center justify-center">
             <video
               src="/How It Works.mp4"

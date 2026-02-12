@@ -26,15 +26,15 @@ import {
 
 const page = () => {
   return (
-    <section className="flex justify-center w-full px-4 pt-15 md:pt-25 2xl:px-0">
+    <section className="flex justify-center w-full px-4 pt-18 md:pt-25 2xl:px-0">
       <div className="w-full flex flex-col 2xl:w-360 mb-20">
-        <span className="text-[#932EFA] text-[16px] font-semibold">
+        <span className="text-secondary text-[16px] font-semibold">
           PAYSLATE
         </span>
-        <h1 className="text-[#01081B] text-[20px] sm:text-[30px] md:text-[40px] font-bold">
+        <h1 className="text-text text-[20px] sm:text-[30px] md:text-[40px] font-bold">
           Privacy Policy
         </h1>
-        <span className="text-[#01081B99] text-[16px] font-normal mb-10">
+        <span className="text-text-1 text-[16px] font-normal mb-10">
           Effective January 10, 2026
         </span>
         <Paragraph label={Description} />
