@@ -76,7 +76,7 @@ const HeroSection = ({ children }: HeroSectionProps) => {
           className="w-full relative bg-cover flex items-center justify-center pt-25"
           style={{ backgroundImage: "url('/assets/imageBg.png')" }}
         >
-          <div className="w-full h-full py-16 flex flex-col lg:flex-row px-4 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
+          <div className="w-full h-full py-16 flex flex-col lg:flex-row px-24 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
             {children}
             <div className="w-full xl:w-1/2 hidden md:flex items-center justify-center gap-3.5 relative">
               <motion.div
@@ -89,7 +89,7 @@ const HeroSection = ({ children }: HeroSectionProps) => {
                   duration: 1,
                   ease: "easeOut",
                 }}
-                className="absolute top-5 left-4 sm:left-[5%] lg:left-auto lg:right-75 max-w-sm p-4 flex gap-2 bg-white rounded-lg"
+                className="absolute top-5 left-4 sm:left-[5%] lg:left-auto lg:right-75 w-[320px] p-4 flex gap-2 rounded-lg"
               >
                 <div className="flex">
                   {avatarDetails.map((avatar) => (
@@ -122,7 +122,6 @@ const HeroSection = ({ children }: HeroSectionProps) => {
                   <p className="text-text font-semibold">Book Created</p>
                   <p className="text-primary font-bold">+1,35,890.00</p>
                   <div className="flex justify-between">
-                    <p className="text-muted text-[14px]">1th Jan, 2025</p>
                     <p className="text-green-1 text-[14px]">
                       Synced in Real-Time ✅
                     </p>
@@ -155,7 +154,7 @@ const HeroSection = ({ children }: HeroSectionProps) => {
           className="w-full relative flex items-center justify-center py-10 overflow-hidden"
           ref={featuresContainerRef}
         >
-          <div className="w-full h-full flex flex-col px-4 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
+          <div className="w-full h-full flex flex-col px-24 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
             <div className="flex flex-col gap-1">
               {isLargeScreen ? (
                 <motion.h1
@@ -216,7 +215,7 @@ const HeroSection = ({ children }: HeroSectionProps) => {
               </div>
             </div>
             <div className="flex w-full">
-              <div className="w-[30%] flex flex-col justify-between">
+              <div className="w-[30%] gap-4 flex flex-col justify-center">
                 {featureDetails.slice(0, 2).map((feature) => (
                   <motion.div
                     key={feature.id}
@@ -255,7 +254,7 @@ const HeroSection = ({ children }: HeroSectionProps) => {
                   className="feature-image invisible pointer-events-none"
                 />
               </div>
-              <div className="w-[30%] flex flex-col justify-between">
+              <div className="w-[30%] gap-4 flex flex-col justify-center">
                 {featureDetails.slice(2, 4).map((feature) => (
                   <motion.div
                     key={feature.id}

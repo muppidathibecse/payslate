@@ -5,7 +5,7 @@ import { navLinks1, navLinks2, SocialMediaData } from "./home/data";
 export default function Footer() {
   return (
     <footer className="relative bg-gradient-primary mt-20 text-white flex flex-col justify-center items-center overflow-hidden">
-      <div className="w-full relative 2xl:w-360 z-0  p-4 md:p-12 2xl:px-0">
+      <div className="w-full relative 2xl:w-360 z-0  p-4 md:p-24 2xl:px-0">
         <div className="absolute -top-8 -right-20 z-10 max-[837px]:hidden">
           <Image
             src="/assets/footerBg.gif"
@@ -31,7 +31,7 @@ export default function Footer() {
             <span> Pay</span>
             <span className="text-primary">slate</span>
           </div>
-          <div className="flex flex-row gap-3 relative z-50">
+          {/* <div className="flex flex-row gap-3 relative z-50">
             {SocialMediaData.map((item, index) => (
               <div
                 key={index}
@@ -47,7 +47,7 @@ export default function Footer() {
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
         <div className="w-full relative z-10 flex flex-col lg:flex-row gap-[15vw]">
           <div className="flex-1 sm:w-full lg:w-1/3">
@@ -83,7 +83,9 @@ export default function Footer() {
                 </ul>
               </nav>
             </div>
-            <p className="mt-10 text-[18px] font-normal">Payslate @2026</p>
+            <p className="mt-10 text-[18px] font-normal text-[#b4b2b2]">
+              © Copyright © Payslate 2025. All Rights Reserved
+            </p>
           </div>
         </div>
       </div>

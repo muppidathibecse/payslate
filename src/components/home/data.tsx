@@ -16,7 +16,6 @@ import { PlayStoreIcon } from "@/src/icons/PlayStore";
 import PlayStoreLogo from "@/src/icons/PlayStoreLogo";
 import TcsLogo from "@/src/icons/TcsLogo";
 import XeroxLogo from "@/src/icons/XeroxLogo";
-import { title } from "process";
 
 export const navbarLinks = [
   { label: "Home", href: "/" },
@@ -43,31 +42,33 @@ export const avatarDetails = [
 export const featureDetails = [
   {
     id: 1,
-    title: "Cash Flow Tracking",
-    description: "Stay on top of every cash in and out across your company.",
+    title: "CASH FLOW TRACKING",
+    description:
+      "Track every income and expense across your business with complete clarity.",
     icon: <CashFlowIcon />,
     bg: "#F1EFFF",
   },
   {
     id: 2,
-    title: "Material Book Management",
-    description: "Track materials, pricing, and stock details with precision.",
+    title: "MATERIAL BOOK MANAGEMENT",
+    description:
+      "Monitor material purchases, pricing, quantities, and stock levels in one place.",
     icon: <MaterialIcon />,
     bg: "#EFF4FF",
   },
   {
     id: 3,
-    title: "Automated Reporting",
+    title: "AUTOMATED REPORTING",
     description:
-      "Generate instant reports for customers, vendors, and departments.",
+      "Generate instant financial summaries for owners, partners, vendors, and departments.",
     icon: <GraphIcon />,
     bg: "#EFF2FF",
   },
   {
     id: 4,
-    title: "Multi-User Collaboration",
+    title: "MULTI-USER COLLABORATION",
     description:
-      "Share books securely with managers or partners using customizable permissions.",
+      "Assign custom roles for Owner, Partner, Manager, and Employee with secure permission control.",
     icon: <CollaborationIcon />,
     bg: "#FFEFFB",
   },
@@ -207,14 +208,14 @@ export const TESTIMONIALS = [
   },
   {
     id: 2,
-    rating: 2,
+    rating: 4,
     text: "We used to manage materials and vendor payments manually, which often created confusion. With Payslate, everything is organized in one place with clear transaction history and accurate records. It gives us better control, accountability, and confidence in our financial decisions.",
     name: "Arjun Mehta",
     role: "Industrial Contractor",
   },
   {
     id: 3,
-    rating: 4,
+    rating: 5,
     text: "The role-based access feature fits perfectly with our company structure. Employees can add transactions while management monitors operations in real time. Cash flow tracking is now accurate, secure, and saves us hours of manual verification every week.",
     name: "Sandeep Sharma",
     role: "Operations Manager",
@@ -258,8 +259,8 @@ export const navLinks1 = [
 export const navLinks2 = [
   { label: "testimonial", href: "/#testimonial" },
   { label: "download app", href: "/#download" },
-  { label: "privacy policy", href: "/privacy" },
-  { label: "term and conditions", href: "/termsandcondition" },
+  { label: "privacy policy", href: "/privacy-policy" },
+  { label: "term and conditions", href: "/terms-and-conditions" },
 ];
 
 export const buttons = [

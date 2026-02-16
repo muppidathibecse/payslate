@@ -7,7 +7,7 @@ export default function ExploreApp() {
     <section className="w-full md:px-0">
       <div className="relative 2xl:w-360 mx-auto bg-primary px-6 md:px-10 max-[1340px]:py-10 min-[1340px]:pt-24 rounded-[20px] overflow-visible">
         <div className="text-white z-10">
-          <h1 className="text-[28px] md:text-[42px] font-bold leading-tight mb-6 md:max-w-135">
+          <h1 className="text-[28px] md:text-[42px] font-bold leading-tight mb-6 lg:max-w-100">
             {ExploreAppData.title}
           </h1>
 

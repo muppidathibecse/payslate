@@ -20,7 +20,7 @@ function TestimonialCard({
   role: string;
 }) {
   return (
-    <article className="w-full md:w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-80 flex flex-col">
+    <article className="w-full md:w-104.75 shrink-0 rounded-xl bg-white px-6 py-8 h-95 flex flex-col bg-[url('/assets/cardBg.png')] bg-cover bg-center">
       <div className="flex flex-col justify-between h-full w-full">
         <div className="space-y-4">
           <div className="flex gap-1">
@@ -61,7 +61,7 @@ export default function Testimonial() {
   return (
     <section
       id="testimonial"
-      className="overflow-hidden bg-white-4 p-4 md:p-12 w-full"
+      className="overflow-hidden bg-white-4 p-4 md:p-24 w-full"
     >
       <div className="mx-auto 2xl:w-360">
         <div className="flex flex-col justify-between gap-10 lg:flex-row">
@@ -107,19 +107,21 @@ export default function Testimonial() {
               </button>
             </div>
           </header>
-          <div className="overflow-hidden w-full md:max-w-215">
-            <ul
-              className="flex flex-col md:flex-row gap-6 transition-transform duration-300 ease-in-out"
-              style={{
-                transform: `translateX(-${index * (CARD_WIDTH + GAP)}px)`,
-              }}
-            >
-              {TESTIMONIALS.map((item) => (
-                <li key={item.id}>
-                  <TestimonialCard {...item} />
-                </li>
-              ))}
-            </ul>
+          <div className="outer">
+            <div className="inner w-full md:max-w-215">
+              <ul
+                className="flex flex-col md:flex-row gap-6 transition-transform duration-300 ease-in-out"
+                style={{
+                  transform: `translateX(-${index * (CARD_WIDTH + GAP)}px)`,
+                }}
+              >
+                {TESTIMONIALS.map((item) => (
+                  <li key={item.id}>
+                    <TestimonialCard {...item} />
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
         <div className="mt-10 flex flex-col gap-15">

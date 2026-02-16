@@ -28,7 +28,7 @@ const DownloadSectionCard = ({
 }) => {
   return (
     <section
-      className={`flex flex-col justify-between items-start relative text-text px-12 py-12 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 overflow-hidden ${className}`}
+      className={`group flex flex-col justify-between items-start relative text-text px-12 py-12 rounded-[40px] flex-1 h-120 xl:h-150 min-w-62.5 overflow-hidden ${className}`}
     >
       <div aria-labelledby="download-app-section-title">
         <h2 className="text-3xl md:text-4xl font-bold mb-2">{label}</h2>
@@ -61,7 +61,7 @@ const DownloadSectionCard = ({
           alt="App Preview"
           width={300}
           height={300}
-          className="mt-4 w-full h-auto transition-transform duration-300 ease-in-out hover:-translate-y-32"
+          className="mt-4 w-full h-auto transition-transform duration-300 ease-in-out group-hover:-translate-y-32"
         />
       </div>
     </section>
@@ -72,7 +72,7 @@ const DownloadAppSection = () => {
   return (
     <section
       id="download"
-      className="flex flex-col items-center max-[1340px]:gap-10  min-[1340px]:gap-46.75 justify-center w-full p-4 md:p-12 2xl:px-0"
+      className="flex flex-col items-center max-[1340px]:gap-10  min-[1340px]:gap-46.75 justify-center w-full p-4 md:px-24 md:py-12 2xl:px-0"
     >
       <div
         className="flex flex-col items-center 2xl:w-360"

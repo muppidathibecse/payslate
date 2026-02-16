@@ -7,7 +7,7 @@ const HowItWorks = () => {
   return (
     <section
       id="how-it-works"
-      className="bg-white-4 flex items-center justify-center p-4 md:p-12 2xl:px-0"
+      className="bg-white-4 flex items-center justify-center p-4 md:px-24 md:py-12 2xl:px-0"
     >
       <div className="mx-auto w-full 2xl:w-360">
         <header className="mb-16 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
@@ -15,7 +15,7 @@ const HowItWorks = () => {
             <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">
               How it works
             </span>
-            <p className="mt-1 font-bold text-text md:text-4xl text-[28px] w-full md:w-137">
+            <p className="mt-1 font-bold text-text md:text-4xl text-[28px] w-full md:w-136">
               Manage Your Business Finances in 3 Simple Steps
             </p>
           </div>

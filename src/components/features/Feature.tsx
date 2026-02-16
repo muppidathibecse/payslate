@@ -9,7 +9,7 @@ import Card from "./Card";
 const Features = () => (
   <section
     id="features"
-    className="flex justify-center w-full p-4 md:p-12 2xl:px-0"
+    className="flex justify-center w-full p-4 md:px-24 md:py-12 2xl:px-0"
   >
     <div className="w-full flex flex-col justify-center items-center 2xl:w-360">
       <span className="text-sm md:text-base text-secondary font-semibold uppercase w-full">

@@ -8,6 +8,7 @@
   --text-seconday-1: #01081b99;
   --text-seconday-2: #0d0d0d80;
   --text-seconday-3: #0d0d0d;
+  --text-seconday-4: #b4b2b2;
   --text-green-1: #37c390;
   --brand-primary: #804fb0;
   --brand-secondry: #932efa;
@@ -62,6 +63,7 @@
   --color-text-1: var(--text-seconday-1);
   --color-text-2: var(--text-seconday-2);
   --color-text-3: var(--text-seconday-3);
+  --color-text-4: var(--text-seconday-4);
   --color-muted: var(--text-secondary);
 
   --color-white-1: var(--border-white-1);
@@ -127,7 +129,6 @@ body {
 .scroll-container {
   display: flex;
   gap: 4.5rem;
-  width: max-content;
   animation: scroll-left 5s linear infinite;
 }
 
@@ -144,12 +145,6 @@ body {
   }
 }
 
-@media (max-width: 768px) {
-  .scroll-container {
-    animation-duration: 15s;
-  }
-}
-
 .bg-gradient-primary {
   background: var(--gradient-primary);
 }
@@ -162,7 +157,7 @@ body {
 .chalkboard-heading::after {
   content: "";
   position: absolute;
-  left: 55%;
+  left: 40%;
   top: 60;
   transform: translateX(-50%);
   width: 70%;
@@ -187,4 +182,22 @@ body {
   .chalkboard-heading {
     line-height: 1.2;
   }
+}
+
+
+/*
+Source - https://stackoverflow.com/a/47873463
+Posted by Nathan Arthur
+Retrieved 2026-02-16, License - CC BY-SA 3.0
+*/
+
+.outer {
+  clip-path: inset( -100vw -100vw -100vw 0 );
+  width: 100%;
+}
+
+.inner {
+  position: relative;
+  top: 5px;
+  left: 0px;
 }
