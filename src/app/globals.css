@@ -159,3 +159,40 @@ body {
 .bg-gradient-primary {
   background: var(--gradient-primary);
 }
+
+.chalkboard-heading {
+  position: relative;
+  line-height: 1.2;
+}
+
+
+
+.chalkboard-heading::after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  top:60;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 20px;
+  background: url("/assets/underline.svg") no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+  display: none; 
+}
+@media (min-width: 1280px) {
+  .chalkboard-heading::after {
+    display: block;
+  }
+}
+
+@media (min-width: 375px) and (max-width: 456px) {
+  .chalkboard-heading::after {
+    left: 52%;
+    top:27;
+    display: block;
+  }
+  .chalkboard-heading{
+        line-height: 1.2;
+  }
+}

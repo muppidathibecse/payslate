@@ -1,15 +1,14 @@
 "use client";
 
 import Image from "next/image";
-
 import React, { useEffect, useRef, useState } from "react";
-
 import { motion } from "framer-motion";
 import { avatarDetails, featureDetails } from "../data";
-import HeroContent from "./HeroContent";
 import HeroSmallScreen from "./HeroSmallScreen";
-
-const HeroSection = () => {
+type HeroSectionProps = {
+  children: React.ReactNode;
+};
+const HeroSection = ({ children }: HeroSectionProps) => {
   const featuresContainerRef = useRef<HTMLDivElement>(null);
   const heroImageRef = useRef<HTMLDivElement>(null);
   const [isMoveAnimation, setIsMoveAnimation] = useState(false);
@@ -72,13 +71,13 @@ const HeroSection = () => {
 
   return (
     <React.Fragment>
-      <section  className="hidden lg:flex flex-col">
+      <section className="hidden lg:flex flex-col">
         <section
           className="w-full relative bg-cover flex items-center justify-center pt-25"
           style={{ backgroundImage: "url('/assets/imageBg.png')" }}
         >
           <div className="w-full h-full py-16 flex flex-col lg:flex-row px-4 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
-            <HeroContent />
+            {children}
             <div className="w-full xl:w-1/2 hidden md:flex items-center justify-center gap-3.5 relative">
               <motion.div
                 initial={{ x: 0, y: 0 }}
@@ -153,16 +152,16 @@ const HeroSection = () => {
           </div>
         </section>
         <section
-          className="w-full relative flex items-center justify-center py-10"
+          className="w-full relative flex items-center justify-center py-10 overflow-hidden"
           ref={featuresContainerRef}
         >
           <div className="w-full h-full flex flex-col px-4 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
             <div className="flex flex-col gap-1">
               {isLargeScreen ? (
                 <motion.h1
-                  initial={{ y: -40, opacity: 0 }}
+                  initial={{ y: -190, opacity: 0 }}
                   animate={{
-                    y: isMoveAnimation ? 0 : -40,
+                    y: isMoveAnimation ? 0 : -190,
                     opacity: isMoveAnimation ? 1 : 0,
                   }}
                   transition={{
@@ -181,9 +180,9 @@ const HeroSection = () => {
               <div className="w-full flex gap-10 justify-between">
                 <motion.div
                   className="flex flex-col text-left w-[40%]"
-                  initial={{ y: -40, opacity: 0 }}
+                  initial={{ y: -190, opacity: 0 }}
                   animate={{
-                    y: isMoveAnimation ? 0 : -40,
+                    y: isMoveAnimation ? 0 : -190,
                     opacity: isMoveAnimation ? 1 : 0,
                   }}
                   transition={{
@@ -198,9 +197,9 @@ const HeroSection = () => {
 
                 <motion.div
                   className="max-w-[30%]"
-                  initial={{ y: -40, opacity: 0 }}
+                  initial={{ y: -190, opacity: 0 }}
                   animate={{
-                    y: isMoveAnimation ? 0 : -40,
+                    y: isMoveAnimation ? 0 : -190,
                     opacity: isMoveAnimation ? 1 : 0,
                   }}
                   transition={{

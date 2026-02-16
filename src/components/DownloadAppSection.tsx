@@ -61,11 +61,7 @@ const DownloadSectionCard = ({
           alt="App Preview"
           width={300}
           height={300}
-          className="
-      mt-4 w-full h-auto
-      transition-transform duration-300 ease-in-out
-      hover:-translate-y-32
-    "
+          className="mt-4 w-full h-auto transition-transform duration-300 ease-in-out hover:-translate-y-32"
         />
       </div>
     </section>

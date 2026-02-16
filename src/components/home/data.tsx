@@ -1,9 +1,12 @@
 import AppleLogo from "@/src/icons/AppleLogo";
 import { AppleStoreIcon } from "@/src/icons/AppStore";
+import CameraIcon from "@/src/icons/CameraIcon";
 import CapgeminiLogo from "@/src/icons/CapgeminiLogo";
 import CashFlowIcon from "@/src/icons/CashFlowIcon";
 import CollaborationIcon from "@/src/icons/CollaborationIcon";
 import DecathlonLogo from "@/src/icons/DecathlonLogo";
+import DownloadIcon from "@/src/icons/DownloadIcon";
+import FileDataIcon from "@/src/icons/FileDataIcon";
 import GraphIcon from "@/src/icons/GraphIcon";
 import HsbcLogo from "@/src/icons/HsbcLogo";
 import LottoSocialLogo from "@/src/icons/LottoSocialLogo";
@@ -13,6 +16,7 @@ import { PlayStoreIcon } from "@/src/icons/PlayStore";
 import PlayStoreLogo from "@/src/icons/PlayStoreLogo";
 import TcsLogo from "@/src/icons/TcsLogo";
 import XeroxLogo from "@/src/icons/XeroxLogo";
+import { title } from "process";
 
 export const navbarLinks = [
   { label: "Home", href: "/" },
@@ -47,8 +51,7 @@ export const featureDetails = [
   {
     id: 2,
     title: "Material Book Management",
-    description:
-      "Track materials, pricing, and stock details with precision.",
+    description: "Track materials, pricing, and stock details with precision.",
     icon: <MaterialIcon />,
     bg: "#EFF4FF",
   },
@@ -171,6 +174,11 @@ export const LogosData = [
     customerName: "HSBC",
     logo: "/assets/icons/companyLogos/hsbcIcon.svg",
     coloredLogo: "/assets/icons/companyLogos/hsbcColoredIcon.svg",
+  },
+  {
+    customerName: "NIKE",
+    logo: "/assets/icons/companyLogos/nikeIcon.svg",
+    coloredLogo: "/assets/icons/companyLogos/nikeColoredIcon.svg",
   },
   {
     customerName: "TCS",
@@ -300,5 +308,36 @@ export const DownloadOptionData = [
     name: "Google Play",
     link: "https://play.google.com/store/apps/details?id=com.dotmite.payslate",
     icon: <PlayStoreLogo />,
+  },
+];
+
+export const ExploreAppData = {
+  title: "Take Control of Your Business Finance Today",
+  description:
+    "Payslate brings your cash flow, material tracking, vendor management, and transactions into one secure and structured platform.",
+  buttonLabel: "Download Payslate now",
+};
+
+export const HowItWorksSteps = [
+  {
+    number: "01",
+    title: "Create Your Business Profile",
+    description:
+      "Set up your industrial business in minutes and define roles for your team.",
+    icon: <DownloadIcon />,
+  },
+  {
+    number: "02",
+    title: "Create Books & Categories",
+    description:
+      "Organize operations with dedicated Cash Book, Material Book, and Vendor records.",
+    icon: <FileDataIcon />,
+  },
+  {
+    number: "03",
+    title: "Track, Collaborate & Analyze",
+    description:
+      "Track transactions, share access, and get real-time insights.",
+    icon: <CameraIcon />,
   },
 ];

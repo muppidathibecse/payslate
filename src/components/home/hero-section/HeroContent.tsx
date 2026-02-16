@@ -12,7 +12,7 @@ const HeroContent = () => {
         <h1 className="text-secondary font-semibold leading-[150%]">
           PAYSLATE
         </h1>
-        <h2 className="font-bold md:text-6xl text-[32px]  text-text">
+        <h2 className="chalkboard-heading font-bold md:text-6xl text-[32px] text-text">
           Your Business Financial Chalkboard
         </h2>
       </div>

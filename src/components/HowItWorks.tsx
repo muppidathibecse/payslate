@@ -1,34 +1,7 @@
 import Link from "next/link";
 
 import Button from "./Button";
-import { KEY_FEATUURES_CARD_STYLE } from "./home/data";
-import CameraIcon from "../icons/CameraIcon";
-import DownloadIcon from "../icons/DownloadIcon";
-import FileDataIcon from "../icons/FileDataIcon";
-
-const steps = [
-  {
-    number: "01",
-    title: "Create Your Business Profile",
-    description:
-      "Set up your industrial business in minutes and define roles for your team.",
-    icon: <DownloadIcon />,
-  },
-  {
-    number: "02",
-    title: "Create Books & Categories",
-    description:
-      "Organize operations with dedicated Cash Book, Material Book, and Vendor records.",
-    icon: <FileDataIcon />,
-  },
-  {
-    number: "03",
-    title: "Track, Collaborate & Analyze",
-    description:
-      "Track transactions, share access, and get real-time insights.",
-    icon: <CameraIcon />,
-  },
-];
+import { HowItWorksSteps, KEY_FEATUURES_CARD_STYLE } from "./home/data";
 
 const HowItWorks = () => {
   return (
@@ -55,7 +28,7 @@ const HowItWorks = () => {
 
         <div className="rounded-3xl bg-white px-8 py-12 shadow-sm ring-1 ring-gray-100 sm:px-12 sm:py-16 ">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-3 md:gap-0">
-            {steps.map((step) => (
+            {HowItWorksSteps.map((step) => (
               <div
                 key={step.number}
                 className={`relative flex flex-col items-start md:px-15 ${KEY_FEATUURES_CARD_STYLE}`}

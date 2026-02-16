@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Button from "./Button";
 import { useState } from "react";
+
+import Button from "./Button";
 import { navbarLinks } from "./home/data";
 
 
