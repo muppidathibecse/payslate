@@ -8,7 +8,7 @@
   --text-seconday-1: #01081b99;
   --text-seconday-2: #0d0d0d80;
   --text-seconday-3: #0d0d0d;
-  --text-green-1: #37C390;
+  --text-green-1: #37c390;
   --brand-primary: #804fb0;
   --brand-secondry: #932efa;
   --feature-muted: #cfd0d1;
@@ -22,13 +22,9 @@
   --border-white-4: #f6f6f6;
   --border-white-5: #ebebeb;
   --border-white-6: #e5e5e5;
-  --border-white-7: #001F36;
+  --border-white-7: #001f36;
 
-  --gradient-primary: linear-gradient(
-    180deg,
-    #0A0123 45.45%,
-    #0E0229 100%
-  );
+  --gradient-primary: linear-gradient(180deg, #0a0123 45.45%, #0e0229 100%);
 
   /* Spacing scale: 4px base unit */
   --space-0: 0px;
@@ -59,11 +55,10 @@
   --color-feature-muted: var(--feature-muted);
   --color-gradient-primary: var(--text-gradient-primary);
 
-
   /* text colors */
 
   --color-text: var(--text-primary);
-   --color-green-1: var(--text-green-1);
+  --color-green-1: var(--text-green-1);
   --color-text-1: var(--text-seconday-1);
   --color-text-2: var(--text-seconday-2);
   --color-text-3: var(--text-seconday-3);
@@ -76,7 +71,6 @@
   --color-white-5: var(--border-white-5);
   --color-white-6: var(--border-white-6);
   --color-white-7: var(--border-white-7);
-
 
   --font-sans: var(--font-urbanist);
   --font-mono: var(--font-geist-mono);
@@ -138,7 +132,7 @@ body {
 }
 
 .scroll-container:hover {
-  animation-play-state: paused;
+  animation-play-state: running;
 }
 
 @keyframes scroll-left {
@@ -165,20 +159,18 @@ body {
   line-height: 1.2;
 }
 
-
-
 .chalkboard-heading::after {
   content: "";
   position: absolute;
   left: 55%;
-  top:60;
+  top: 60;
   transform: translateX(-50%);
   width: 70%;
   height: 20px;
   background: url("/assets/underline.svg") no-repeat center;
   background-size: contain;
   pointer-events: none;
-  display: none; 
+  display: none;
 }
 @media (min-width: 1280px) {
   .chalkboard-heading::after {
@@ -189,10 +181,10 @@ body {
 @media (min-width: 375px) and (max-width: 456px) {
   .chalkboard-heading::after {
     left: 52%;
-    top:27;
+    top: 27;
     display: block;
   }
-  .chalkboard-heading{
-        line-height: 1.2;
+  .chalkboard-heading {
+    line-height: 1.2;
   }
 }

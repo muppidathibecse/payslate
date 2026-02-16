@@ -126,7 +126,7 @@ export const details = {
 };
 
 export const KEY_FEATUURES_CARD_STYLE =
-  "relative px-3 lg:nth-[3n+2]:before:content-[''] lg:nth-[3n+2]:before:absolute lg:nth-[3n+2]:before:inset-y-0 lg:nth-[3n+2]:before:left-0 lg:nth-[3n+2]:before:w-px lg:nth-[3n+2]:before:bg-[linear-gradient(to_bottom,#F5F5F5,#CBCBCB,#F5F5F5)] lg:nth-[3n+2]:after:content-[''] lg:nth-[3n+2]:after:absolute lg:nth-[3n+2]:after:inset-y-0 lg:nth-[3n+2]:after:right-0 lg:nth-[3n+2]:after:w-px lg:nth-[3n+2]:after:bg-[linear-gradient(to_bottom,#F5F5F5,#CBCBCB,#F5F5F5)]";
+  "relative px-5 lg:nth-[3n+2]:before:content-[''] lg:nth-[3n+2]:before:absolute lg:nth-[3n+2]:before:inset-y-0 lg:nth-[3n+2]:before:left-0 lg:nth-[3n+2]:before:top-8 lg:nth-[3n+2]:before:w-px lg:nth-[3n+2]:before:h-[145px]  lg:nth-[3n+2]:before:bg-[linear-gradient(to_bottom,#F5F5F5,#CBCBCB,#F5F5F5)] lg:nth-[3n+2]:after:content-[''] lg:nth-[3n+2]:after:absolute lg:nth-[3n+2]:after:inset-y-0 lg:nth-[3n+2]:after:right-0 lg:nth-[3n+2]:after:top-8 lg:nth-[3n+2]:after:w-px lg:nth-[3n+2]:after:h-[145px] lg:nth-[3n+2]:after:bg-[linear-gradient(to_bottom,#F5F5F5,#CBCBCB,#F5F5F5)]";
 
 export const TestimonialData = {
   label: "TESTIMONIAL",
@@ -251,13 +251,13 @@ export const appDownloadOptions = [
 export const navLinks1 = [
   { label: "home", href: "/#home" },
   { label: "features", href: "/#feat" },
-  { label: "about", href: "/#about" },
   { label: "how it Works", href: "/#how-it-works" },
+  { label: "key features", href: "/#features" },
 ];
 
 export const navLinks2 = [
-  { label: "key features", href: "/#features" },
   { label: "testimonial", href: "/#testimonial" },
+  { label: "download app", href: "/#download" },
   { label: "privacy policy", href: "/privacy" },
   { label: "term and conditions", href: "/termsandcondition" },
 ];
