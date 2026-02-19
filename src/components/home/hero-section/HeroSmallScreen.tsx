@@ -5,7 +5,6 @@ import React from "react";
 import HeroContent from "./HeroContent";
 import { avatarDetails, featureDetails } from "../data";
 
-
 const HeroSmallScreen = () => {
   return (
     <React.Fragment>
@@ -54,7 +53,7 @@ const HeroSmallScreen = () => {
 
             <div className="w-fit">
               <Image
-                src={"/assets/hero-section/Mobile.png"}
+                src={"/assets/icons/hero-section/Mobile.png"}
                 alt="Mobile Image"
                 width={280}
                 height={500}
@@ -64,9 +63,7 @@ const HeroSmallScreen = () => {
         </div>
       </section>
 
-      <section
-        className="w-full relative flex items-center justify-center py-10"
-      >
+      <section className="w-full relative flex items-center justify-center py-10">
         <div className="w-full h-full flex flex-col px-4 2xl:px-0 2xl:w-360 items-center justify-between gap-10 xl:gap-20">
           <div className="flex flex-col gap-1">
             <h1 className="text-secondary font-semibold leading-[150%]">
@@ -103,9 +100,7 @@ const HeroSmallScreen = () => {
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-text-3 leading-6">
-                    {feature.description}
-                  </p>
+                  <p className="text-text-3 leading-6">{feature.description}</p>
                 </div>
               ))}
             </div>
@@ -124,9 +119,7 @@ const HeroSmallScreen = () => {
                       {feature.title}
                     </h3>
                   </div>
-                  <p className="text-text-3 leading-6">
-                    {feature.description}
-                  </p>
+                  <p className="text-text-3 leading-6">{feature.description}</p>
                 </div>
               ))}
             </div>
