@@ -16,7 +16,7 @@ export default function Home() {
       </HeroSection>
       <HowItWorks />
       <Features />
-      <Testimonial/>
+      {false && <Testimonial />}
       <DownloadAppSection />
     </section>
   );
