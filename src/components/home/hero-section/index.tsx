@@ -141,7 +141,7 @@ const HeroSection = ({ children }: HeroSectionProps) => {
                 ref={heroImageRef}
               >
                 <Image
-                  src={"/assets/hero-section/Mobile.png"}
+                  src={"/assets/icons/hero-section/Mobile.png"}
                   alt="Mobile Image"
                   width={280}
                   height={500}
@@ -247,7 +247,7 @@ const HeroSection = ({ children }: HeroSectionProps) => {
               </div>
               <div className="w-[40%] relative flex items-center min-h-140 justify-center ">
                 <Image
-                  src="/assets/hero-section/Mobile.png"
+                  src="/assets/icons/hero-section/Mobile.png"
                   alt="Mobile Image"
                   width={280}
                   height={500}
