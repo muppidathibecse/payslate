@@ -10,7 +10,7 @@ export default function Footer() {
           <Image
             src="/assets/footerBg.gif"
             alt="Footer background"
-            width={900}
+            width={1100}
             height={100}
             priority
             className="object-contain"
@@ -83,8 +83,11 @@ export default function Footer() {
                 </ul>
               </nav>
             </div>
-            <p className="mt-10 text-[18px] font-normal text-[#b4b2b2]">
-              © Copyright © Payslate 2025. All Rights Reserved
+            <p className="mt-10 text-[18px] font-normal text-[#b4b2b2] flex items-start gap-1">
+              <span className="text-sm mt-0.75">&copy;</span>
+              <span>
+                2026 Dotmite Technologies Private Limited. All Rights Reserved
+              </span>
             </p>
           </div>
         </div>

@@ -21,7 +21,7 @@ export const navbarLinks = [
   { label: "Home", href: "/" },
   { label: "Features", href: "/#features" },
   { label: "How it works", href: "/#how-it-works" },
-  { label: "Testimonials", href: "/#testimonial" },
+  // { label: "Testimonials", href: "/#testimonial" },
 ];
 
 export const avatarDetails = [
@@ -257,7 +257,7 @@ export const navLinks1 = [
 ];
 
 export const navLinks2 = [
-  { label: "testimonial", href: "/#testimonial" },
+  // { label: "testimonial", href: "/#testimonial" },
   { label: "download app", href: "/#download" },
   { label: "privacy policy", href: "/privacy-policy" },
   { label: "term and conditions", href: "/terms-and-conditions" },

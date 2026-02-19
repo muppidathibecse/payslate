@@ -7,8 +7,6 @@ import { useState } from "react";
 import Button from "./Button";
 import { navbarLinks } from "./home/data";
 
-
-
 const Navbar = () => {
   const [activeButton, setActiveButton] = useState<string>("Home");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -18,7 +16,7 @@ const Navbar = () => {
       aria-label="Main navigation"
       className="flex justify-center items-center"
     >
-      <div className="absolute md:top-5 -top-1 z-50 flex flex-row items-center gap-4 rounded-[60px] bg-white md:border md:border-white-6 md:px-4 py-4 max-w-204 w-full px-4 md:flex-row md:justify-center md:gap-0">
+      <div className="absolute md:top-5 -top-1 z-50 flex flex-row items-center gap-4 rounded-[60px] bg-white md:border md:border-white-6 md:px-4 py-4 max-w-170 w-full px-4 md:flex-row md:justify-center md:gap-0">
         <Link href="/" className="flex items-center gap-2 md:pr-6">
           <Image src="/Brand.gif" alt="Brand" width={30} height={30} priority />
           <span className="text-black font-medium text-5">
