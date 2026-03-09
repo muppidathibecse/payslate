@@ -1,0 +1,33 @@
+name: CI-CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Build Application
+        run: |
+          echo "Building the application..."
+          # Example build command
+          make build
+
+      - name: Run Tests
+        run: |
+          echo "Running tests..."
+          # Example test command
+          make test
+
+      - name: Deploy Application
+        run: |
+          echo "Deploying application..."
+          # Example deploy command
+          ./deploy.sh
