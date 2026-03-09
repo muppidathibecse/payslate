@@ -1,9 +1,12 @@
 name: CI-CD Pipeline
 
-
+#on:
+  push:
+    branches:
+      - main
 
 jobs:
-  pipeline:
+  build-test-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -13,7 +16,7 @@ jobs:
 
       - name: Build Application
         run: |
-          echo "Building the application..."
+          echo "Starting build..."
           # Example build command
           make build
 
@@ -23,8 +26,20 @@ jobs:
           # Example test command
           make test
 
-      - name: Deploy Application
+      - name: Setup SSH Agent
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to payslate-server
         run: |
-          echo "Deploying application..."
-          # Example deploy command
-          ./deploy.sh
+          ssh -o StrictHostKeyChecking=no ubuntu@13.203.132.99 << 'EOF'
+            cd /payslate/expense_manager_backend/target
+            git pull origin main
+
+            # install dependencies if needed
+            pip install -r requirements.txt
+
+            # restart application service
+            sudo systemctl restart app
+          EOF
