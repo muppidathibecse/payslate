@@ -36,16 +36,14 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Deploy to payslate-server
+    - name: Deploy
       run: |
-        ssh -o StrictHostKeyChecking=no ubuntu@13.203.132.99 << 'EOF'
-          cd /home/ubuntu/payslate/payslate-website
-          echo "Pull latest code"
-          git pull origin main
-          echo "Install dependencies"
-          npm install
-          echo "Build application"
-          npm run build
-          echo "Restart frontend service"
-          pm2 restart payslate-website || pm2 start npm --name payslate-website -- start
+        ssh ubuntu@13.203.132.99 << 'EOF'
+        cd ~/payslate/payslate-website
+        git pull origin main
+        npm install
+        npm run build
+        pm2 restart payslate-website
         EOF
+
+
