@@ -24,6 +24,11 @@ jobs:
         working-directory: expense_manager_backend
         run: mvn -B clean package
 
+      - name: Show repository structure
+        run: |
+          pwd
+          ls -R
+
       - name: Run Tests
         working-directory: expense_manager_backend
         run: mvn test
