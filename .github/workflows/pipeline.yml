@@ -1,1 +1,41 @@
+name: CI-CD Pipeline
 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-test-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build Application
+        run: mvn clean package
+
+      - name: Run Tests
+        run: mvn test
+
+      - name: Setup SSH Agent
+        uses: webfactory/ssh-agent@v0.8.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to payslate-server
+        run: |
+          ssh -o StrictHostKeyChecking=no ubuntu@13.203.132.99 << 'EOF'
+            cd /payslate/expense_manager_backend/target
+            git pull origin main
+            mvn clean package
+            sudo systemctl restart app
+          EOF
