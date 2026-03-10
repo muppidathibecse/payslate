@@ -19,7 +19,7 @@ import XeroxLogo from "@/src/icons/XeroxLogo";
 
 export const navbarLinks = [
   { label: "Home", href: "/#home" },
-  { label: "Features", href: "/#features" },
+  { label: "Feature ", href: "/#features" },
   { label: "How it works", href: "/#how-it-works" },
   // { label: "Testimonials", href: "/#testimonial" },
 ];
