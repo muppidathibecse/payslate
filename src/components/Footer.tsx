@@ -1,8 +1,45 @@
+"use client";
+
 import Image from "next/image";
 
-import { navLinks1, navLinks2, SocialMediaData } from "./home/data";
+import { navLinks1, navLinks2 } from "./home/data";
 
 export default function Footer() {
+  const handleScrollClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string,
+  ) => {
+    if (href.startsWith("/#") && window.location.pathname === "/") {
+      e.preventDefault();
+      const targetId = href.replace("/#", "");
+      const elem = document.getElementById(targetId);
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+      } else {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    } else if (href.startsWith("/#")) {
+      if (window.location.protocol === "file:") {
+        e.preventDefault();
+        const currentPath = window.location.pathname;
+        const outIndex = currentPath.lastIndexOf("/out/");
+        if (outIndex !== -1) {
+          const basePath = currentPath.substring(0, outIndex + 5);
+          window.location.assign(`file://${basePath}index.html${href.replace("/", "")}`);
+        }
+      }
+    } else if (window.location.protocol === "file:") {
+      // Intercept normal links (e.g. /privacy-policy) for file:// protocol
+      e.preventDefault();
+      const currentPath = window.location.pathname;
+      const outIndex = currentPath.lastIndexOf("/out/");
+      if (outIndex !== -1) {
+        const basePath = currentPath.substring(0, outIndex + 4); // Include '/out'
+        window.location.assign(`file://${basePath}${href}/index.html`);
+      }
+    }
+  };
+
   return (
     <footer className="relative bg-gradient-primary mt-20 text-white flex flex-col justify-center items-center overflow-hidden">
       <div className="w-full relative 2xl:w-360 z-0  p-4 md:p-24 2xl:px-0">
@@ -59,9 +96,10 @@ export default function Footer() {
               <nav className="w-full flex gap-20">
                 <ul className="space-y-4">
                   {navLinks1.map((link) => (
-                    <li key={link.href} className="whitespace-nowrap">
+                    <li key={link.label} className="whitespace-nowrap">
                       <a
                         href={link.href}
+                        onClick={(e) => handleScrollClick(e, link.href)}
                         className="text-sm hover:text-gray-300 transition-colors uppercase"
                       >
                         {link.label}
@@ -71,9 +109,10 @@ export default function Footer() {
                 </ul>
                 <ul className="space-y-4">
                   {navLinks2.map((link) => (
-                    <li key={link.href}>
+                    <li key={link.label}>
                       <a
                         href={link.href}
+                        onClick={(e) => handleScrollClick(e, link.href)}
                         className="text-sm hover:text-gray-300 transition-colors uppercase"
                       >
                         {link.label}
