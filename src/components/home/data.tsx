@@ -18,7 +18,7 @@ import TcsLogo from "@/src/icons/TcsLogo";
 import XeroxLogo from "@/src/icons/XeroxLogo";
 
 export const navbarLinks = [
-  { label: "Home", href: "/" },
+  { label: "Home", href: "/#home" },
   { label: "Features", href: "/#features" },
   { label: "How it works", href: "/#how-it-works" },
   // { label: "Testimonials", href: "/#testimonial" },
@@ -251,7 +251,7 @@ export const appDownloadOptions = [
 
 export const navLinks1 = [
   { label: "home", href: "/#home" },
-  { label: "features", href: "/#feat" },
+  { label: "features", href: "/#features" },
   { label: "how it Works", href: "/#how-it-works" },
   { label: "key features", href: "/#features" },
 ];

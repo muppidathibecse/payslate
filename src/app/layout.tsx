@@ -12,7 +12,7 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   title: "Payslate",
   description:
-    "Payslate - simple, secure, and transparent payment solutions for modern businesses.",
+    "Business management app for multi-book accounting, transaction tracking, stock control, and real-time analytics.",
 };
 
 export default function RootLayout({
@@ -22,12 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${urbanist.variable} font-sans antialiased`}
-      >
-         <Navbar />
+      <body className={`${urbanist.variable} font-sans antialiased`}>
+        <Navbar />
         {children}
-         <Footer />
+        <Footer />
       </body>
     </html>
   );
