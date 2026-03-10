@@ -1,4 +1,4 @@
-name: CI-CD Pipeline
+name: Payslate Frontend CI/CD
 
 on:
   push:
@@ -11,39 +11,52 @@ jobs:
 
     steps:
 
-    - name: Checkout Code
+    - name: Checkout repository
       uses: actions/checkout@v4
 
-    - name: Setup Node
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 20
 
-    - name: Install Dependencies
+    - name: Install dependencies
       run: npm install
 
-    - name: Lint Code
+    - name: Run lint
       run: npm run lint
 
-    - name: Build Application
+    - name: Build application
       run: npm run build
 
-    - name: Security Scan (npm audit)
+    - name: Run tests
+      run: |
+        if npm run | grep -q "test"; then
+          npm run test
+        else
+          echo "No tests found, skipping..."
+        fi
+
+    - name: Security audit
       run: npm audit --audit-level=high || true
 
-    - name: Setup SSH
-      uses: webfactory/ssh-agent@v0.8.0
+    - name: Setup SSH agent
+      uses: webfactory/ssh-agent@v0.7.0
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-    - name: Deploy
+    - name: Add server to known_hosts
+      run: |
+        mkdir -p ~/.ssh
+        ssh-keyscan -H 13.203.132.99 >> ~/.ssh/known_hosts
+
+    - name: Deploy application
       run: |
         ssh ubuntu@13.203.132.99 << 'EOF'
-        cd ~/payslate/payslate-website
-        git pull origin main
-        npm install
-        npm run build
-        pm2 restart payslate-website
+          cd ~/payslate/payslate-website
+          git pull origin main
+          npm install
+          npm run build
+          pm2 restart payslate-website
         EOF
 
 
